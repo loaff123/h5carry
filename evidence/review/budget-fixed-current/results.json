@@ -1,0 +1,13 @@
+[
+  {
+    "case": "metadata_total_contradiction",
+    "rejected_by": "codec",
+    "code": "RESOURCE"
+  },
+  {
+    "case": "forged_shape",
+    "rejected_by": "actual_source_preflight",
+    "code": "RESOURCE",
+    "staging_unchanged": true
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "interrupted_after": "output",
+    "exception": "PublicationError",
+    "reported_publication": {
+      "output_published": true,
+      "report_published": false
+    },
+    "actual_publication": {
+      "output_published": true,
+      "report_published": false
+    }
+  },
+  {
+    "interrupted_after": "report",
+    "exception": "PublicationError",
+    "reported_publication": {
+      "output_published": true,
+      "report_published": true
+    },
+    "actual_publication": {
+      "output_published": true,
+      "report_published": true
+    }
+  }
+]

@@ -1,0 +1,141 @@
+{
+  "common": {
+    "axes": {
+      "/axes/channel": {
+        "dtype": "i2",
+        "scale_name": "coordinate",
+        "values": [
+          1,
+          2,
+          3
+        ]
+      },
+      "/axes/time": {
+        "dtype": "f8",
+        "scale_name": "coordinate",
+        "values": [
+          0.0,
+          0.1,
+          0.2,
+          0.3
+        ]
+      }
+    },
+    "calibration": {
+      "dtype": "f8",
+      "path": "/calibration/gain",
+      "unit": "dimensionless",
+      "values": [
+        1.5,
+        2.5,
+        3.5
+      ]
+    },
+    "intensity": {
+      "base_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "chunks": [
+        2,
+        3
+      ],
+      "compression": "gzip",
+      "compression_opts": 4,
+      "dtype": "i4",
+      "marker_attribute": "run name",
+      "run_offsets": {
+        "excluded": 200,
+        "other": 100,
+        "selected": 0
+      },
+      "shape": [
+        4,
+        3
+      ]
+    },
+    "intensity_scales": {
+      "axis_0": "/axes/time",
+      "axis_0_label": "time",
+      "axis_1": "/axes/channel"
+    },
+    "selected_alias": {
+      "path": "/runs/selected/intensity_alias",
+      "target": "/runs/selected/intensity"
+    },
+    "soft_link": {
+      "path": "/runs/selected/gain",
+      "target_text": "/calibration/gain"
+    }
+  },
+  "format": "h5carry-original-fixtures",
+  "frozen_families": [
+    {
+      "additions": [],
+      "family": 1,
+      "selections": [
+        "/runs/selected"
+      ]
+    },
+    {
+      "additions": [],
+      "family": 2,
+      "selections": [
+        "/runs/selected",
+        "/runs/other"
+      ]
+    },
+    {
+      "additions": [
+        "unused /calibration/gain_alias hard alias",
+        "/runs/selected/targets: calibration reference and null",
+        "/runs/selected calibration_ref attribute"
+      ],
+      "family": 3,
+      "selections": [
+        "/runs/selected"
+      ]
+    },
+    {
+      "additions": [
+        "/runs/selected/empty: f8 shape (0,3)",
+        "/runs/selected/scalar: f8 negative zero",
+        "/axes/alternate: u2 [0,1,2,3], coordinate scale",
+        "alternate attached beside time on selected intensity axis 0",
+        "/runs/selected/square: f8 identity(4), time on both axes"
+      ],
+      "family": 4,
+      "selections": [
+        "/runs/selected"
+      ]
+    }
+  ],
+  "generator": "examples/three_run_archive.py",
+  "generator_sha256": "33cdeba050b3e8124812bb5cd148a423e45a93d11ecb4693adf84183316381b3",
+  "provenance": "Original benign generated scientific data; no downloaded HDF5 inputs",
+  "supplemental_demo": {
+    "adds": [
+      "root title",
+      "runs instrument and calibration_ref attributes",
+      "two-element gzip/chunked extensible reference datasets and calibration_ref attributes on both retained runs"
+    ],
+    "base_family": 2,
+    "expected_calibrated_totals": {
+      "combined": 3346,
+      "other": 3173,
+      "selected": 173
+    },
+    "separate_from_frozen_families": true
+  },
+  "version": 1
+}

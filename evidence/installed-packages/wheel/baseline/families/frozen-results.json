@@ -1,0 +1,169 @@
+{
+  "scope": "product exports of the four original frozen fixture families",
+  "families": [
+    {
+      "family": 1,
+      "status": "passed",
+      "source": {
+        "family": 1,
+        "file": "source.h5",
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "status": "verified",
+        "valid": true
+      },
+      "manual_reopened_output_check": {
+        "excluded_marker_absent": true,
+        "explicit_references_match": true,
+        "family": 1,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "independent_of_product_implementation_and_plan": true,
+        "logical_values_and_types_match": true,
+        "namespace_matches": true,
+        "objects_checked": 9,
+        "ordinary_attributes_match": true,
+        "scale_edges": 2,
+        "selected_aliases_match": true,
+        "status": "verified"
+      },
+      "source_sha256": "8e98a2fac0247f49dc99dcb9e6d375bd76853234bcd3055c00c8b232c63328cf",
+      "source_unchanged": true,
+      "output_sha256": "4ece40e234b64fa067984c4154075126ed93b602fb676a44010c6dc2e773903d",
+      "runtime": {
+        "h5py": "3.14.0",
+        "hdf5": "1.14.6",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      }
+    },
+    {
+      "family": 2,
+      "status": "passed",
+      "source": {
+        "family": 2,
+        "file": "source.h5",
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "status": "verified",
+        "valid": true
+      },
+      "manual_reopened_output_check": {
+        "excluded_marker_absent": true,
+        "explicit_references_match": true,
+        "family": 2,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "independent_of_product_implementation_and_plan": true,
+        "logical_values_and_types_match": true,
+        "namespace_matches": true,
+        "objects_checked": 11,
+        "ordinary_attributes_match": true,
+        "scale_edges": 4,
+        "selected_aliases_match": true,
+        "status": "verified"
+      },
+      "source_sha256": "8e98a2fac0247f49dc99dcb9e6d375bd76853234bcd3055c00c8b232c63328cf",
+      "source_unchanged": true,
+      "output_sha256": "1fa02c082167b2e3007e9334d2891605ba1a87d94bf52fdd582727a8cce9cf82",
+      "runtime": {
+        "h5py": "3.14.0",
+        "hdf5": "1.14.6",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      }
+    },
+    {
+      "family": 3,
+      "status": "passed",
+      "source": {
+        "family": 3,
+        "file": "source.h5",
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "status": "verified",
+        "valid": true
+      },
+      "manual_reopened_output_check": {
+        "excluded_marker_absent": true,
+        "explicit_references_match": true,
+        "family": 3,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "independent_of_product_implementation_and_plan": true,
+        "logical_values_and_types_match": true,
+        "namespace_matches": true,
+        "objects_checked": 10,
+        "ordinary_attributes_match": true,
+        "scale_edges": 2,
+        "selected_aliases_match": true,
+        "status": "verified"
+      },
+      "source_sha256": "c659c5ae509e630bf1886a2413e1540f74e4bd121426721004eaa420ccda04ce",
+      "source_unchanged": true,
+      "output_sha256": "a7962bba845191cc526ac95be9204ef4a1f0800f5ad04d6a5fc72981e6b80176",
+      "runtime": {
+        "h5py": "3.14.0",
+        "hdf5": "1.14.6",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      }
+    },
+    {
+      "family": 4,
+      "status": "passed",
+      "source": {
+        "family": 4,
+        "file": "source.h5",
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 9,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "status": "verified",
+        "valid": true
+      },
+      "manual_reopened_output_check": {
+        "excluded_marker_absent": true,
+        "explicit_references_match": true,
+        "family": 4,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "independent_of_product_implementation_and_plan": true,
+        "logical_values_and_types_match": true,
+        "namespace_matches": true,
+        "objects_checked": 13,
+        "ordinary_attributes_match": true,
+        "scale_edges": 5,
+        "selected_aliases_match": true,
+        "status": "verified"
+      },
+      "source_sha256": "00c4d4cfafa91f9c1b435e4229e9bb6036ed9ce4fe9b655d23e13b2da18ed88f",
+      "source_unchanged": true,
+      "output_sha256": "259fd4aeda21bea77ec3b1f987b2dcdcb2afd0f97987f459d0eb3ef627699824",
+      "runtime": {
+        "h5py": "3.14.0",
+        "hdf5": "1.14.6",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      }
+    }
+  ]
+}

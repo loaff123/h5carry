@@ -1,0 +1,38 @@
+[
+  {
+    "command": "python examples/three_run_archive.py source.h5 --demo",
+    "exit_code": 0,
+    "stdout": "{\"expected_calibrated_totals\": [173, 3173], \"file\": \"source.h5\", \"fixture\": \"supplemental-demo\", \"selections\": [\"/runs/selected\", \"/runs/other\"], \"status\": \"generated\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": "h5carry plan source.h5 --select /runs/selected --select /runs/other --out plan.json",
+    "exit_code": 0,
+    "stdout": "{\"links\":14,\"objects\":13,\"payload_bytes\":190,\"source\":{\"sha256\":\"3d9b22ab00e51f2d93a3ffe55dc2319caee78b629d761cdd0987ac28cb98dd09\",\"size\":36936},\"status\":\"planned\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": "h5carry export source.h5 --plan plan.json --out selected.h5 --report export-report.json",
+    "exit_code": 0,
+    "stdout": "{\"coverage\":{\"closure_independently_derived\":true,\"data_blocks\":48,\"links\":14,\"max_read_bytes\":32,\"objects\":13,\"payload_bytes\":190,\"references\":7,\"scales\":4,\"source_equality\":true},\"diagnostics\":[],\"format\":\"h5carry-report\",\"limits\":{\"chunk_bytes\":1048576,\"discovery_seconds\":60,\"max_attribute_bytes\":262144,\"max_depth\":64,\"max_edges\":50000,\"max_name_bytes\":1024,\"max_objects\":10000,\"max_payload_bytes\":268435456,\"max_plan_bytes\":8388608,\"max_rank\":32},\"operation\":\"export\",\"output\":{\"sha256\":\"ef0a696fd21783dbb05d2ae4f3fe9e3b0426e57f9262610ed9b0e55281661b32\",\"size\":20566},\"plan_sha256\":\"b1925bb51332265294c08c385d2d01c332325d4f2877c4788920a1a28b4571fa\",\"publication\":{\"output_published\":true,\"report_published\":true},\"runtime\":{\"h5py\":\"3.14.0\",\"hdf5\":\"1.14.6\",\"numpy\":\"2.3.5\",\"python\":\"3.12.14\"},\"source\":{\"sha256\":\"3d9b22ab00e51f2d93a3ffe55dc2319caee78b629d761cdd0987ac28cb98dd09\",\"size\":36936},\"status\":\"verified\",\"version\":1}\n",
+    "stderr": ""
+  },
+  {
+    "command": "h5carry verify source.h5 selected.h5 --plan plan.json --report verify-report.json",
+    "exit_code": 0,
+    "stdout": "{\"coverage\":{\"closure_independently_derived\":true,\"data_blocks\":48,\"links\":14,\"max_read_bytes\":32,\"objects\":13,\"payload_bytes\":190,\"references\":7,\"scales\":4,\"source_equality\":true},\"diagnostics\":[],\"format\":\"h5carry-report\",\"limits\":{\"chunk_bytes\":1048576,\"discovery_seconds\":60,\"max_attribute_bytes\":262144,\"max_depth\":64,\"max_edges\":50000,\"max_name_bytes\":1024,\"max_objects\":10000,\"max_payload_bytes\":268435456,\"max_plan_bytes\":8388608,\"max_rank\":32},\"operation\":\"verify\",\"output\":{\"sha256\":\"ef0a696fd21783dbb05d2ae4f3fe9e3b0426e57f9262610ed9b0e55281661b32\",\"size\":20566},\"plan_sha256\":\"b1925bb51332265294c08c385d2d01c332325d4f2877c4788920a1a28b4571fa\",\"runtime\":{\"h5py\":\"3.14.0\",\"hdf5\":\"1.14.6\",\"numpy\":\"2.3.5\",\"python\":\"3.12.14\"},\"source\":{\"sha256\":\"3d9b22ab00e51f2d93a3ffe55dc2319caee78b629d761cdd0987ac28cb98dd09\",\"size\":36936},\"status\":\"verified\",\"version\":1}\n",
+    "stderr": ""
+  },
+  {
+    "command": "h5carry inspect selected.h5 --report inspect-report.json",
+    "exit_code": 0,
+    "stdout": "{\"coverage\":{\"closure_independently_derived\":false,\"data_blocks\":13,\"links\":14,\"max_read_bytes\":32,\"objects\":13,\"payload_bytes\":190,\"references\":7,\"scales\":4,\"source_equality\":false},\"diagnostics\":[],\"format\":\"h5carry-report\",\"limits\":{\"chunk_bytes\":1048576,\"discovery_seconds\":60,\"max_attribute_bytes\":262144,\"max_depth\":64,\"max_edges\":50000,\"max_name_bytes\":1024,\"max_objects\":10000,\"max_payload_bytes\":268435456,\"max_plan_bytes\":8388608,\"max_rank\":32},\"operation\":\"inspect\",\"output\":{\"sha256\":\"ef0a696fd21783dbb05d2ae4f3fe9e3b0426e57f9262610ed9b0e55281661b32\",\"size\":20566},\"runtime\":{\"h5py\":\"3.14.0\",\"hdf5\":\"1.14.6\",\"numpy\":\"2.3.5\",\"python\":\"3.12.14\"},\"status\":\"inspected\",\"version\":1}\n",
+    "stderr": ""
+  },
+  {
+    "command": "python examples/analyze_selected.py relocated/selected.h5 --require-demo",
+    "exit_code": 0,
+    "stdout": "{\"calibrated_totals\": {\"other\": 3173.0, \"selected\": 173.0}, \"combined_total\": 3346.0, \"excluded_marker_absent\": true, \"explicit_reference_checks\": 7, \"file\": \"selected.h5\", \"forward_reverse_scales_match\": true, \"objects_checked\": 13, \"selected_alias_preserved\": true, \"shared_scales_preserved\": true, \"soft_calibration_identity_preserved\": true, \"source_opened\": false, \"status\": \"verified\", \"supplemental_demo\": true}\n",
+    "stderr": ""
+  }
+]

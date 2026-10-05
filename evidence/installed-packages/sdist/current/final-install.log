@@ -1,0 +1,16 @@
+WARNING: The directory '<home>/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing ./qualification-runs/extracted-final-sdist/h5carry-0.1.0a1
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: h5carry
+  Building wheel for h5carry (pyproject.toml): started
+  Building wheel for h5carry (pyproject.toml): finished with status 'done'
+  Created wheel for h5carry: filename=h5carry-0.1.0a1-py3-none-any.whl size=45578 sha256=c46c2169331ef51ead06cb71813c1c341b0e3acc69aabde68c57343700a5e44e
+  Stored in directory: <temporary-pip-wheel-cache>
+Successfully built h5carry
+Installing collected packages: h5carry
+  Attempting uninstall: h5carry
+    Found existing installation: h5carry 0.1.0a1
+    Uninstalling h5carry-0.1.0a1:
+      Successfully uninstalled h5carry-0.1.0a1
+Successfully installed h5carry-0.1.0a1

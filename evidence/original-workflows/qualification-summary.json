@@ -1,0 +1,95 @@
+{
+  "checked_date": "2026-10-05",
+  "claims": [
+    "All native reads used original benign generated fixtures.",
+    "Four frozen fixture families remain unchanged; the richer sharing demo is supplemental.",
+    "Measured API baseline limitations are confined to these fixtures and exact runtimes.",
+    "Plain-copy successes and preserved baseline values/aliases/references are credited.",
+    "Relocation removes the original source pathname; retained source bytes are not OS-denied.",
+    "Resource limits and disabled plugins are not a parser-security or filesystem sandbox."
+  ],
+  "format": "h5carry-original-workflow-qualification",
+  "native_worker_profile": {
+    "address_space_bytes": 2147483648,
+    "cpu_seconds": 120,
+    "dynamic_hdf5_plugins_disabled": true,
+    "per_file_bytes": 1073741824,
+    "platform": "Linux",
+    "python_isolated": true,
+    "python_site_startup_disabled": true,
+    "self_contained_virtual_environment": true,
+    "wall_seconds": 180
+  },
+  "profiles": {
+    "baseline": {
+      "baseline_marker_search_has_unresolved_references": true,
+      "calibrated_total_each_demo": 3346,
+      "copies_preserving_ordinary_values": 8,
+      "copies_preserving_selected_alias": 8,
+      "copies_with_scale_iteration_errors": 8,
+      "evidence": {
+        "copy_comparison": "baseline/copy-comparison/baseline-results.json",
+        "frozen_product": "baseline/product-families/frozen-results.json",
+        "relocation": "baseline/demonstrations/demo-results.json"
+      },
+      "frozen_product_families_passed": 4,
+      "ordinary_and_expanded_copies": 8,
+      "plain_control_checks_passed": 14,
+      "plain_controls_passed": 2,
+      "relocated_demo_variants_passed": 2,
+      "reopened_valid_sources": 4,
+      "runtime": {
+        "h5py": "3.14.0",
+        "hdf5": "1.14.6",
+        "numpy": "2.3.5",
+        "platform": "Linux",
+        "python": "3.12.14"
+      },
+      "supplemental_explicit_reference_checks": 7
+    },
+    "current": {
+      "baseline_marker_search_has_unresolved_references": true,
+      "calibrated_total_each_demo": 3346,
+      "copies_preserving_ordinary_values": 8,
+      "copies_preserving_selected_alias": 8,
+      "copies_with_scale_iteration_errors": 8,
+      "evidence": {
+        "copy_comparison": "current/copy-comparison/baseline-results.json",
+        "frozen_product": "current/product-families/frozen-results.json",
+        "relocation": "current/demonstrations/demo-results.json"
+      },
+      "frozen_product_families_passed": 4,
+      "ordinary_and_expanded_copies": 8,
+      "plain_control_checks_passed": 14,
+      "plain_controls_passed": 2,
+      "relocated_demo_variants_passed": 2,
+      "reopened_valid_sources": 4,
+      "runtime": {
+        "h5py": "3.16.0",
+        "hdf5": "2.0.0",
+        "numpy": "2.3.5",
+        "platform": "Linux",
+        "python": "3.12.14"
+      },
+      "supplemental_explicit_reference_checks": 7
+    }
+  },
+  "reproduction": [
+    "python qualification/run_baselines.py NEW_COPY_EVIDENCE",
+    "python qualification/run_product_families.py --out NEW_PRODUCT_EVIDENCE",
+    "python qualification/run_demo.py --out NEW_DEMO_EVIDENCE"
+  ],
+  "script_sha256": {
+    "docs/comparison.md": "166815fdde0e8f2a7abe3e7706eae773d96f4cbe309009ce512069f8c3fbdc61",
+    "examples/_bounded.py": "246e79c2f179799090e5378903d711c2c4f2de3c16f6b210b59932bdff04452f",
+    "examples/analyze_selected.py": "d6a39358401b6c55713787912cac6f48684b5876107b3577b4c4ef32c4e3bc37",
+    "examples/three_run_archive.py": "33cdeba050b3e8124812bb5cd148a423e45a93d11ecb4693adf84183316381b3",
+    "qualification/check_frozen.py": "85a496c00627309903b2ec9b39a29f41ceff16fb20c84b458567f8ac7829c09e",
+    "qualification/fixture-manifest.json": "8014acd6db83f2a3d5ee104828cf997a9e3ec8f3c8b4d1a2aa619beac7b1d0f1",
+    "qualification/run_baselines.py": "d955dfd7a0557729538c27d9c5fab1b0cde39234a7b58d56b87653b10d9da0c3",
+    "qualification/run_demo.py": "a382eec4061351ff72b16615b5073922e82a8eaa7f49e488917b58ceabc3e2fb",
+    "qualification/run_product_families.py": "3eab2e6fa3997d5017b2814f2314f71b12459218b94e8830267e7191b81049b8",
+    "tests/fixtures.py": "a57b063c3c8b67cf7a37a0b87453ed78903c87c046bf37be58c0d0b4f3e4d4dd"
+  },
+  "version": 1
+}

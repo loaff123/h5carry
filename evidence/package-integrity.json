@@ -1,0 +1,8 @@
+{
+  "wheel_sha256": "5a71ea8fff6c5912895e1734043a8fba2de8d0d6a6ef7cb9fee14c35e3eea11e",
+  "sdist_sha256": "4fd4c409e603bff9d1d0b0d0711b055503d8a1d3698d5bddc184f48c0f6e3d1d",
+  "production_files_match_reviewed_bytes": 13,
+  "sdist_final_tests_match_source": true,
+  "required_qualification_assets_present": true,
+  "unsafe_paths_or_generated_native_fixtures": false
+}

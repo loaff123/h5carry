@@ -1,0 +1,169 @@
+{
+  "format": "h5carry-release-qualification",
+  "version": 1,
+  "release": "0.1.0a1",
+  "date": "2026-10-05",
+  "qualification_status": "qualified_for_declared_linux_alpha_profile",
+  "publication_status": "not_published_repository_ci_not_run",
+  "profiles": {
+    "baseline": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "h5py": "3.14.0",
+      "hdf5": "1.14.6",
+      "platform": "Linux x86-64",
+      "package_gates": {
+        "wheel": {
+          "full_tests": 94,
+          "failures": 0,
+          "installed_package_path_verified": true,
+          "test_working_directory_contains_product_source": false,
+          "relocated_demo_variants_passed": 2,
+          "frozen_product_families_passed": 4
+        },
+        "sdist": {
+          "full_tests": 94,
+          "failures": 0,
+          "installed_package_path_verified": true,
+          "test_working_directory_contains_product_source": false,
+          "relocated_demo_variants_passed": 2,
+          "frozen_product_families_passed": 4
+        }
+      },
+      "ceiling_calibration": {
+        "objects": {
+          "status": "verified",
+          "objects": 10000,
+          "edges": 9999,
+          "payload_bytes": 0,
+          "plan_bytes": 1380434,
+          "max_rss_kib": 155656,
+          "seconds": 7.007472699999198
+        },
+        "edges": {
+          "status": "verified",
+          "objects": 2,
+          "edges": 50000,
+          "payload_bytes": 399992,
+          "plan_bytes": 3439768,
+          "max_rss_kib": 120040,
+          "seconds": 1.6252443550001772
+        },
+        "payload": {
+          "status": "verified",
+          "objects": 2,
+          "edges": 1,
+          "payload_bytes": 268435456,
+          "plan_bytes": 1018,
+          "max_rss_kib": 49872,
+          "seconds": 1.0133126449982228
+        },
+        "attribute": {
+          "status": "verified",
+          "objects": 1,
+          "edges": 0,
+          "payload_bytes": 0,
+          "plan_bytes": 524948,
+          "max_rss_kib": 78264,
+          "seconds": 0.041091805996984476
+        }
+      }
+    },
+    "current": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "h5py": "3.16.0",
+      "hdf5": "2.0.0",
+      "platform": "Linux x86-64",
+      "package_gates": {
+        "wheel": {
+          "full_tests": 94,
+          "failures": 0,
+          "installed_package_path_verified": true,
+          "test_working_directory_contains_product_source": false,
+          "relocated_demo_variants_passed": 2,
+          "frozen_product_families_passed": 4
+        },
+        "sdist": {
+          "full_tests": 94,
+          "failures": 0,
+          "installed_package_path_verified": true,
+          "test_working_directory_contains_product_source": false,
+          "relocated_demo_variants_passed": 2,
+          "frozen_product_families_passed": 4
+        }
+      },
+      "ceiling_calibration": {
+        "objects": {
+          "status": "verified",
+          "objects": 10000,
+          "edges": 9999,
+          "payload_bytes": 0,
+          "plan_bytes": 1380434,
+          "max_rss_kib": 158748,
+          "seconds": 7.546140395999828
+        },
+        "edges": {
+          "status": "verified",
+          "objects": 2,
+          "edges": 50000,
+          "payload_bytes": 399992,
+          "plan_bytes": 3439768,
+          "max_rss_kib": 124420,
+          "seconds": 1.6787618420021317
+        },
+        "payload": {
+          "status": "verified",
+          "objects": 2,
+          "edges": 1,
+          "payload_bytes": 268435456,
+          "plan_bytes": 1018,
+          "max_rss_kib": 48252,
+          "seconds": 0.99979431400061
+        },
+        "attribute": {
+          "status": "verified",
+          "objects": 1,
+          "edges": 0,
+          "payload_bytes": 0,
+          "plan_bytes": 524948,
+          "max_rss_kib": 78436,
+          "seconds": 0.03850663000048371
+        }
+      }
+    }
+  },
+  "independent_review": {
+    "document": "REVIEW.md",
+    "additional_original_cases_per_profile": 9,
+    "additional_rejected_mutations_per_profile": 7,
+    "production_shares_native_parser_and_primitive_descriptors": true
+  },
+  "boundaries": [
+    "Trusted, local, quiescent original-style files only; no malicious-file safety claim",
+    "Whole objects only; no netCDF/CF or domain-schema validity guarantee",
+    "Verifier derives source closure independently but uses the same h5py/HDF5 parser",
+    "Output and report are individually no-clobber, not an atomic multi-file transaction",
+    "Parent hashing is outside native deadlines; verifier rehashing is inside its child deadline",
+    "Separate synthetic limit workloads are not simultaneous-maxima or performance claims",
+    "Only listed Python, operating-system, architecture and dependency profiles were tested",
+    "Baseline scale-copy limitations are demonstrated only on four original fixture families",
+    "Source pathname absent during relocation; held source copies were not OS-denied"
+  ],
+  "known_release_blockers": [],
+  "production_sha256": {
+    "src/h5carry/__init__.py": "eabf5d49de4b24b1b8d03f67c866be39f15de8dfa46dccfd49b39e1ae5e8994a",
+    "src/h5carry/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/h5carry/cli.py": "63bac8cd4bb0cb854162799bfb13397bc6dacd8279063754f5b75508d92d3979",
+    "src/h5carry/model.py": "9ddba3fa49837efe3b6e36f8194b68e92e920d759bd5e1390adff24640bbd69d",
+    "src/h5carry/plan.py": "3bcfb175e5f7223b2e8db4f1adbccaf7ac688c9b8b42fb8d166914491c907fdc",
+    "src/h5carry/profile.py": "9f43cbbb2e9b6f1805ef81f4e3e1d386c873b3876a723cbdccf4ce82822c6f92",
+    "src/h5carry/scan.py": "22e05367c7e06288237ae77b70f169dc209433d0bb38384726a78e9edb484e63",
+    "src/h5carry/schemas/plan-v1.schema.json": "eb69283bcbc72bf90c606c7d37432a24ee82798c12ec3bb54e0658bb86517162",
+    "src/h5carry/supervisor.py": "ee7b6f011371bf017e4d526eb8505e235f6a9a2a3f03287f16d2df4ce274f3a9",
+    "src/h5carry/transaction.py": "e51606c7bbab15f328e02b8242620c50240e5f918f0da666530ac22c749a5a29",
+    "src/h5carry/verify.py": "c96ba29aae070006cb11ab6979b60ed478b10ce214fde0a09e6f1afb2f204c0d",
+    "src/h5carry/worker.py": "6fd806f951c62cca66aaca2edd7046144fe7cf8d7d8ef5aa8939c77432bd4aa6",
+    "src/h5carry/write.py": "d38e58bc0347677d0316de0fda71da635f87212eff158d629882aa6a43f4961d"
+  }
+}

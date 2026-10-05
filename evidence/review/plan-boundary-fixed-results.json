@@ -1,0 +1,43 @@
+[
+  {
+    "case": "exact_active_byte_cap",
+    "limit": 540,
+    "saved_bytes": 540,
+    "result": "accepted"
+  },
+  {
+    "case": "hard_target",
+    "result": {
+      "exception": "CarryError",
+      "code": "INVALID"
+    }
+  },
+  {
+    "case": "reference_owner",
+    "result": {
+      "exception": "CarryError",
+      "code": "INVALID"
+    }
+  },
+  {
+    "case": "reference_target",
+    "result": {
+      "exception": "CarryError",
+      "code": "INVALID"
+    }
+  },
+  {
+    "case": "scale_consumer",
+    "result": {
+      "exception": "CarryError",
+      "code": "INVALID"
+    }
+  },
+  {
+    "case": "reason_value",
+    "result": {
+      "exception": "CarryError",
+      "code": "INVALID"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+test_actual_cpu_exhaustion (test_supervisor.SupervisorTests.test_actual_cpu_exhaustion) ... ok
+test_actual_file_size_exhaustion (test_supervisor.SupervisorTests.test_actual_file_size_exhaustion) ... ok
+test_actual_limits_and_thread_environment_before_native_import (test_supervisor.SupervisorTests.test_actual_limits_and_thread_environment_before_native_import) ... ok
+test_actual_main_maps_memory_and_unexpected_errors (test_supervisor.SupervisorTests.test_actual_main_maps_memory_and_unexpected_errors) ... ok
+test_actual_memory_allocation_denial (test_supervisor.SupervisorTests.test_actual_memory_allocation_denial) ... ok
+test_actual_wall_exhaustion (test_supervisor.SupervisorTests.test_actual_wall_exhaustion) ... ok
+test_blocked_request_pipe_is_subject_to_wall_deadline (test_supervisor.SupervisorTests.test_blocked_request_pipe_is_subject_to_wall_deadline) ... ok
+test_copied_native_test_harness_uses_selected_package_without_source_tree (test_supervisor.SupervisorTests.test_copied_native_test_harness_uses_selected_package_without_source_tree) ... ok
+test_declared_error_codes_survive_protocol (test_supervisor.SupervisorTests.test_declared_error_codes_survive_protocol) ... ok
+test_default_limits_are_release_ceilings (test_supervisor.SupervisorTests.test_default_limits_are_release_ceilings) ... ok
+test_empty_truncated_duplicate_and_malformed_results_are_errors (test_supervisor.SupervisorTests.test_empty_truncated_duplicate_and_malformed_results_are_errors) ... ok
+test_exit_with_live_descendant_cleans_entire_group (test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_hostile_native_and_python_environment_is_removed (test_supervisor.SupervisorTests.test_hostile_native_and_python_environment_is_removed) ... ok
+test_limits_are_frozen_lowering_only_and_strict (test_supervisor.SupervisorTests.test_limits_are_frozen_lowering_only_and_strict) ... ok
+test_main_invalid_request_is_rejected_before_native_import (test_supervisor.SupervisorTests.test_main_invalid_request_is_rejected_before_native_import) ... ok
+test_no_arbitrary_operation_or_extra_fields (test_supervisor.SupervisorTests.test_no_arbitrary_operation_or_extra_fields) ... ok
+test_nonzero_exit_is_error_even_after_success_record (test_supervisor.SupervisorTests.test_nonzero_exit_is_error_even_after_success_record) ... ok
+test_normal_protocol_and_output_capture (test_supervisor.SupervisorTests.test_normal_protocol_and_output_capture) ... ok
+test_production_bootstrap_installs_controls_before_first_native_import (test_supervisor.SupervisorTests.test_production_bootstrap_installs_controls_before_first_native_import) ... ok
+test_request_cap_is_enforced_before_launch (test_supervisor.SupervisorTests.test_request_cap_is_enforced_before_launch) ... ok
+test_result_stdout_and_stderr_are_bounded_separately (test_supervisor.SupervisorTests.test_result_stdout_and_stderr_are_bounded_separately) ... ok
+test_startup_skips_sitecustomize_and_pth_before_and_after_limits (test_supervisor.SupervisorTests.test_startup_skips_sitecustomize_and_pth_before_and_after_limits) ... ok
+test_supervisor_import_does_not_import_native_libraries (test_supervisor.SupervisorTests.test_supervisor_import_does_not_import_native_libraries) ... ok
+test_unavailable_limit_setup_fails_closed_with_diagnostic (test_supervisor.SupervisorTests.test_unavailable_limit_setup_fails_closed_with_diagnostic) ... ok
+test_unexpected_crash_is_error_not_unsupported (test_supervisor.SupervisorTests.test_unexpected_crash_is_error_not_unsupported) ... ok
+test_unexpected_transport_exception_is_error_not_unsupported (test_supervisor.SupervisorTests.test_unexpected_transport_exception_is_error_not_unsupported) ... ok
+test_unsupported_platform_fails_closed_before_launch (test_supervisor.SupervisorTests.test_unsupported_platform_fails_closed_before_launch) ... ok
+test_wall_timeout_cleans_entire_group (test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 3.817s
+
+OK

@@ -1,0 +1,25 @@
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+test_exit_with_live_descendant_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_exit_with_live_descendant_cleans_entire_group) ... ok
+test_wall_timeout_cleans_entire_group (tests.test_supervisor.SupervisorTests.test_wall_timeout_cleans_entire_group) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.635s
+
+OK

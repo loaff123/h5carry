@@ -1,0 +1,23 @@
+WARNING: The directory '<home>/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Looking in links: <qualification-workdir>/qualification-runs/wheelhouse
+Processing ./qualification-runs/wheelhouse/h5py-3.16.0-cp312-cp312-manylinux_2_28_x86_64.whl
+Processing ./qualification-runs/wheelhouse/numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+Processing ./qualification-runs/wheelhouse/build-1.3.0-py3-none-any.whl
+Processing ./qualification-runs/wheelhouse/setuptools-80.9.0-py3-none-any.whl
+Processing ./qualification-runs/wheelhouse/wheel-0.45.1-py3-none-any.whl
+Processing ./qualification-runs/wheelhouse/packaging-26.3-py3-none-any.whl (from build)
+Processing ./qualification-runs/wheelhouse/pyproject_hooks-1.3.3-py3-none-any.whl (from build)
+Installing collected packages: wheel, setuptools, pyproject_hooks, packaging, numpy, h5py, build
+Successfully installed build-1.3.0 h5py-3.16.0 numpy-2.3.5 packaging-26.3 pyproject_hooks-1.3.3 setuptools-80.9.0 wheel-0.45.1
+WARNING: The directory '<home>/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing ./qualification-runs/extracted-sdist-gate/h5carry-0.1.0a1
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: h5carry
+  Building wheel for h5carry (pyproject.toml): started
+  Building wheel for h5carry (pyproject.toml): finished with status 'done'
+  Created wheel for h5carry: filename=h5carry-0.1.0a1-py3-none-any.whl size=45578 sha256=06f2e26752473450417d3126d1eab4573e3dd71ecb64b6071baa22a272379581
+  Stored in directory: <temporary-pip-wheel-cache>
+Successfully built h5carry
+Installing collected packages: h5carry
+Successfully installed h5carry-0.1.0a1

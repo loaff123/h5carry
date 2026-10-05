@@ -1,0 +1,1958 @@
+{
+  "cases": [
+    {
+      "case": "baseline",
+      "inspection": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 34,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      },
+      "observed_max_read_bytes": 32,
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 130,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": true
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "verified"
+      }
+    },
+    {
+      "case": "bounded",
+      "inspection": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 34,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      },
+      "observed_max_read_bytes": 32,
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 130,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": true
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "verified"
+      }
+    },
+    {
+      "case": "bounded_large",
+      "inspection": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 26,
+          "links": 25,
+          "max_read_bytes": 1048576,
+          "objects": 22,
+          "payload_bytes": 12000216,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      },
+      "observed_max_read_bytes": 1048576,
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 102,
+          "links": 25,
+          "max_read_bytes": 1048576,
+          "objects": 22,
+          "payload_bytes": 12000216,
+          "references": 13,
+          "scales": 3,
+          "source_equality": true
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "verified"
+      }
+    },
+    {
+      "case": "unselected_payload",
+      "inspection": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 34,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      },
+      "observed_max_read_bytes": 32,
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 130,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": true
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "verified"
+      }
+    },
+    {
+      "case": "repeated_soft",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 34,
+          "links": 27,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      }
+    },
+    {
+      "case": "oversized_empty_element",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "one logical element exceeds the comparison chunk budget",
+            "path": "/oversized"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "native_soft_limit",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "soft link is not usable with native default access",
+            "path": "/chain0"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "soft_group_path",
+      "inspection": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 34,
+          "links": 26,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "inspected"
+      },
+      "observed_max_read_bytes": 32,
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 130,
+          "links": 26,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": true
+        },
+        "diagnostics": [],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "verified"
+      }
+    },
+    {
+      "case": "invalid_link_name",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "link names must be valid UTF-8 text",
+            "path": "/"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "invalid_attr_name",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "attribute names must be valid UTF-8 text",
+            "path": "/"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "data",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "signed_zero",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/zero"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "nan_payload",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/nan"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "dtype",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/big"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "shape",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/big"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "compression",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/big"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "attribute",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "attribute_type",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "split_alias",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 69,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (0 missing/changed, 1 extra/changed)",
+            "path": "/run/scalar_alias"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output links differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/scalar_alias"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "wrong_ref",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output references differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/refs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "null_ref",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output references differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/refs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "attribute_ref",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output references differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "soft_text",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output links differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/soft_chain"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "missing_scale",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output scales differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "extra_scale",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 68,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output scales differ from independently derived source closure (0 missing/changed, 1 extra/changed)",
+            "path": "/run/alias"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "reverse_scale",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "reverse scale axis is outside consumer rank",
+            "path": "/cal/scale"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "unexpected",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 69,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (0 missing/changed, 1 extra/changed)",
+            "path": "/unexpected"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output links differ from independently derived source closure (0 missing/changed, 1 extra/changed)",
+            "path": "/unexpected"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "external",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "external link is forbidden; target was not opened",
+            "path": "/outside"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "missing_child_both",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "plan objects differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/run/twin1"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan links differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/run/twin1"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "missing_dependency_both",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "plan objects differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/deps/gain"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan links differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/deps/gain"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan references differ from independently derived source closure (4 missing/changed, 0 extra/changed)",
+            "path": "/run/alias"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "ancestor_dependency_both",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "plan objects differ from independently derived source closure (2 missing/changed, 1 extra/changed)",
+            "path": "/"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan links differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/audit/anchor"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan references differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "missing_alias_both",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "plan links differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/run/data"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "missing_group_dependency_child_both",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 34,
+          "links": 0,
+          "max_read_bytes": 32,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "plan objects differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/config/item"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan links differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/config/item"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "plan logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "conflate_objects",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": true,
+          "data_blocks": 67,
+          "links": 25,
+          "max_read_bytes": 32,
+          "objects": 22,
+          "payload_bytes": 696,
+          "references": 13,
+          "scales": 3,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "MISMATCH",
+            "message": "output objects differ from independently derived source closure (1 missing/changed, 0 extra/changed)",
+            "path": "/run/twin2"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output links differ from independently derived source closure (1 missing/changed, 1 extra/changed)",
+            "path": "/run/twin2"
+          },
+          {
+            "code": "MISMATCH",
+            "message": "output logical payload accounting differs"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "mismatch"
+      }
+    },
+    {
+      "case": "changed_source",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "SOURCE_CHANGED",
+            "message": "source does not match the plan fingerprint"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "resource_objects",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "verification object budget exceeded",
+            "path": "/audit"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 1,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "resource_edges",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "group link count exceeds remaining edge budget",
+            "path": "/"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 1,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "resource_payload",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 1,
+          "links": 0,
+          "max_read_bytes": 72,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "selected logical payload exceeds budget",
+            "path": "/audit/anchor"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 1,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "resource_attribute",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "Attribute exceeds max_attribute_bytes",
+            "path": "/@audit"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 1048576,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 1,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "resource_chunk",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "RESOURCE",
+            "message": "one logical element exceeds the comparison chunk budget",
+            "path": "/audit/anchor"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 1,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "inspect_dangling",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "dangling internal soft link or missing selected path",
+            "path": "/run/soft"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "case": "inspect_reverse",
+      "report": {
+        "coverage": {
+          "closure_independently_derived": false,
+          "data_blocks": 0,
+          "links": 0,
+          "max_read_bytes": 0,
+          "objects": 0,
+          "references": 0,
+          "scales": 0,
+          "source_equality": false
+        },
+        "diagnostics": [
+          {
+            "code": "UNSUPPORTED",
+            "message": "reverse scale axis is outside consumer rank",
+            "path": "/cal/scale"
+          }
+        ],
+        "limits": {
+          "chunk_bytes": 32,
+          "discovery_seconds": 60,
+          "max_attribute_bytes": 262144,
+          "max_depth": 64,
+          "max_edges": 50000,
+          "max_name_bytes": 1024,
+          "max_objects": 10000,
+          "max_payload_bytes": 268435456,
+          "max_plan_bytes": 8388608,
+          "max_rank": 32
+        },
+        "runtime": {
+          "h5py": "3.14.0",
+          "hdf5": "1.14.6",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "status": "incomplete"
+      }
+    }
+  ],
+  "expected_graph": "Manually enumerated paths, references and scale relations; primitive encoding descriptors only shared",
+  "fixture_origin": "Original benign fixtures created separately for each case",
+  "independence": "No imports of scanner/writer/planner closure; altered omission plans structurally validated"
+}

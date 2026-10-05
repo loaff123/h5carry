@@ -1,0 +1,38 @@
+{
+  "mode": "objects",
+  "status": "verified",
+  "source_unchanged": true,
+  "limits": {
+    "max_objects": 10000,
+    "max_edges": 50000,
+    "max_plan_bytes": 8388608,
+    "max_payload_bytes": 268435456,
+    "chunk_bytes": 1048576,
+    "max_attribute_bytes": 262144,
+    "max_depth": 64,
+    "max_name_bytes": 1024,
+    "max_rank": 32,
+    "discovery_seconds": 60
+  },
+  "objects": 10000,
+  "edges": 9999,
+  "logical_payload_bytes": 0,
+  "plan_bytes": 1380434,
+  "source_file_bytes": 7597555,
+  "output_file_bytes": 3068128,
+  "max_rss_kib": 155656,
+  "seconds": {
+    "fixture": 0.2646028640010627,
+    "plan": 3.210947754996596,
+    "write": 1.036215855001501,
+    "verify": 2.4957062260000384,
+    "total": 7.007472699999198
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "h5py": "3.14.0",
+    "hdf5": "1.14.6",
+    "numpy": "2.3.5"
+  },
+  "diagnostics": []
+}

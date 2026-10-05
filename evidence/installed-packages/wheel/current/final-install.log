@@ -1,0 +1,8 @@
+WARNING: The directory '<home>/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing ./h5carry/dist/h5carry-0.1.0a1-py3-none-any.whl
+Installing collected packages: h5carry
+  Attempting uninstall: h5carry
+    Found existing installation: h5carry 0.1.0a1
+    Uninstalling h5carry-0.1.0a1:
+      Successfully uninstalled h5carry-0.1.0a1
+Successfully installed h5carry-0.1.0a1

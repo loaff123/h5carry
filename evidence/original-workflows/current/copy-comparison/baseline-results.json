@@ -1,0 +1,550 @@
+{
+  "comparison_api": "h5py.Group.copy",
+  "families": [
+    {
+      "copies": [
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": false,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 4,
+            "unresolved": [
+              "KeyError: unresolved link",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "ordinary",
+          "ordinary_values_preserved": true,
+          "output_file": "family-1-ordinary.h5",
+          "output_sha256": "1383064fed171803db06d7924e83a723191d823fff431bf8f7e7733d2ce18178",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": []
+        },
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": true,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 5,
+            "unresolved": [
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "expanded",
+          "ordinary_values_preserved": true,
+          "output_file": "family-1-expanded.h5",
+          "output_sha256": "cc6d8a9c788969c0cdb5bdc957f06560584de6ce0f2cd379befb7f9ba40a45e3",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/gain",
+              "scales": [
+                []
+              ]
+            }
+          ]
+        }
+      ],
+      "family": 1,
+      "selections": [
+        "/runs/selected"
+      ],
+      "source": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_file": "family-1-source.h5",
+      "source_rechecked_after_copy": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_sha256": "8e98a2fac0247f49dc99dcb9e6d375bd76853234bcd3055c00c8b232c63328cf",
+      "source_unchanged": true
+    },
+    {
+      "copies": [
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": false,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 6,
+            "unresolved": [
+              "KeyError: unresolved link",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "ordinary",
+          "ordinary_values_preserved": true,
+          "output_file": "family-2-ordinary.h5",
+          "output_sha256": "71cbafa0bef2b28f112d9ca15e7e3ff7d7e0baf6b59592bf6e3831934e6ca512",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/other/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            },
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": []
+        },
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": true,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 7,
+            "unresolved": [
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "expanded",
+          "ordinary_values_preserved": true,
+          "output_file": "family-2-expanded.h5",
+          "output_sha256": "bd5320e117b5612751b40aa30d5a4823d8bf04b36a9b7c770d13310b40375355",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/other/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            },
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/gain",
+              "scales": [
+                []
+              ]
+            }
+          ]
+        }
+      ],
+      "family": 2,
+      "selections": [
+        "/runs/selected",
+        "/runs/other"
+      ],
+      "source": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_file": "family-2-source.h5",
+      "source_rechecked_after_copy": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_sha256": "8e98a2fac0247f49dc99dcb9e6d375bd76853234bcd3055c00c8b232c63328cf",
+      "source_unchanged": true
+    },
+    {
+      "copies": [
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": false,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 5,
+            "unresolved": [
+              "KeyError: unresolved link",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "attribute_calibration_resolves": false,
+            "attribute_is_null": true,
+            "dataset_calibration_resolves": false,
+            "dataset_first_is_null": true,
+            "null_reference_preserved": true
+          },
+          "intensity_alias_preserved": true,
+          "method": "ordinary",
+          "ordinary_values_preserved": true,
+          "output_file": "family-3-ordinary.h5",
+          "output_sha256": "fa8c152dd28f67311ffdb0828b484f4387a5f4d665577b6335a56859b7ddb189",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/targets",
+              "scales": [
+                []
+              ]
+            }
+          ]
+        },
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": true,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 6,
+            "unresolved": [
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "attribute_calibration_resolves": true,
+            "attribute_is_null": false,
+            "dataset_calibration_resolves": true,
+            "dataset_first_is_null": false,
+            "null_reference_preserved": true
+          },
+          "intensity_alias_preserved": true,
+          "method": "expanded",
+          "ordinary_values_preserved": true,
+          "output_file": "family-3-expanded.h5",
+          "output_sha256": "e723e5b922e7d67e032ca68afcb5fe6906112f19b642506d1e1ed77b700843ae",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/gain",
+              "scales": [
+                []
+              ]
+            },
+            {
+              "dataset": "/runs/selected/targets",
+              "scales": [
+                []
+              ]
+            }
+          ]
+        }
+      ],
+      "family": 3,
+      "selections": [
+        "/runs/selected"
+      ],
+      "source": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_file": "family-3-source.h5",
+      "source_rechecked_after_copy": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 6,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_sha256": "c659c5ae509e630bf1886a2413e1540f74e4bd121426721004eaa420ccda04ce",
+      "source_unchanged": true
+    },
+    {
+      "copies": [
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": false,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 7,
+            "unresolved": [
+              "KeyError: unresolved link",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "ordinary",
+          "ordinary_values_preserved": true,
+          "output_file": "family-4-ordinary.h5",
+          "output_sha256": "bd6c8e87e3b63106d169e5a7f23ac477702c3bdbdb6c48e8e9c3ed0cebd57291",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            },
+            {
+              "dataset": "/runs/selected/square",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/empty",
+              "scales": [
+                [],
+                []
+              ]
+            },
+            {
+              "dataset": "/runs/selected/scalar",
+              "scales": []
+            }
+          ]
+        },
+        {
+          "all_named_scale_iterations_succeeded": false,
+          "calibration_link_resolves_to_expected_values": true,
+          "copy_created": true,
+          "excluded_marker_scan": {
+            "complete": false,
+            "excluded_found": [],
+            "objects_checked": 8,
+            "unresolved": [
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference",
+              "unresolved object reference"
+            ]
+          },
+          "explicit_references": {
+            "applicable": false
+          },
+          "intensity_alias_preserved": true,
+          "method": "expanded",
+          "ordinary_values_preserved": true,
+          "output_file": "family-4-expanded.h5",
+          "output_sha256": "5abd8f2befa598a039364f8573392ac126b4e72abb5fb3404ea2f4023433210e",
+          "scale_iteration_errors": [
+            {
+              "dataset": "/runs/selected/intensity",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            },
+            {
+              "dataset": "/runs/selected/square",
+              "message": "Unspecified error in H5DSiterate_scales (return value <0)",
+              "type": "RuntimeError"
+            }
+          ],
+          "scale_iteration_observations": [
+            {
+              "dataset": "/runs/selected/empty",
+              "scales": [
+                [],
+                []
+              ]
+            },
+            {
+              "dataset": "/runs/selected/gain",
+              "scales": [
+                []
+              ]
+            },
+            {
+              "dataset": "/runs/selected/scalar",
+              "scales": []
+            }
+          ]
+        }
+      ],
+      "family": 4,
+      "selections": [
+        "/runs/selected"
+      ],
+      "source": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 9,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_file": "family-4-source.h5",
+      "source_rechecked_after_copy": {
+        "forward_reverse_scales_match": true,
+        "namespace_matches": true,
+        "ordinary_values_preserved": true,
+        "reopened_read_only": true,
+        "scale_edges": 9,
+        "source_aliases_resolve": true,
+        "source_references_resolve": true,
+        "valid": true
+      },
+      "source_sha256": "00c4d4cfafa91f9c1b435e4229e9bb6036ed9ce4fe9b655d23e13b2da18ed88f",
+      "source_unchanged": true
+    }
+  ],
+  "limitations": [
+    "Only the stated original fixtures and exact runtime are measured.",
+    "Copy successes and failed scale iterations are reported separately.",
+    "Expanded soft links may become hard links; successful plain controls do not claim soft-link text retention.",
+    "No excluded marker found is not a proof of general reverse-reference expansion behavior.",
+    "No speed, novelty, universal compatibility, parser-security, or current-upstream regression claim.",
+    "h5copy and h5diff command-line tools were not run; these are h5py API observations."
+  ],
+  "plain_controls": [
+    {
+      "checks": {
+        "chunk_filter": true,
+        "dataset_attribute": true,
+        "dtype": true,
+        "group_attribute": true,
+        "hard_alias": true,
+        "soft_target_values": true,
+        "values": true
+      },
+      "method": "ordinary",
+      "output_file": "plain-ordinary.h5",
+      "output_sha256": "d28afc52d432065e407e0ec5d1ff431aab344c0a851d4913c95bde70b4d85077"
+    },
+    {
+      "checks": {
+        "chunk_filter": true,
+        "dataset_attribute": true,
+        "dtype": true,
+        "group_attribute": true,
+        "hard_alias": true,
+        "soft_target_values": true,
+        "values": true
+      },
+      "method": "expanded",
+      "output_file": "plain-expanded.h5",
+      "output_sha256": "f10dbcae16955f5a0a1a5ceaab378308144be6d0cccbfb93b9a892ac5a25995c"
+    }
+  ],
+  "plain_source_checks": {
+    "chunk_filter": true,
+    "dataset_attribute": true,
+    "dtype": true,
+    "group_attribute": true,
+    "hard_alias": true,
+    "soft_target_values": true,
+    "values": true
+  },
+  "plain_source_unchanged": true,
+  "process_limits": {
+    "address_space_bytes": 2147483648,
+    "cpu_seconds": 120,
+    "dynamic_plugins_disabled": true,
+    "file_size_bytes": 1073741824,
+    "wall_seconds": 180
+  },
+  "runtime": {
+    "h5py": "3.16.0",
+    "hdf5": "2.0.0",
+    "numpy": "2.3.5",
+    "platform": "Linux",
+    "python": "3.12.14"
+  },
+  "scope": "four original frozen families and a separate plain-copy control",
+  "status": "complete",
+  "supplementary_cli_tools": {
+    "h5copy": {
+      "available": false,
+      "run": false
+    },
+    "h5diff": {
+      "available": false,
+      "run": false
+    }
+  }
+}

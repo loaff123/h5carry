@@ -1,0 +1,18 @@
+{
+  "calibrated_totals": {
+    "other": 3173.0,
+    "selected": 173.0
+  },
+  "combined_total": 3346.0,
+  "excluded_marker_absent": true,
+  "explicit_reference_checks": 0,
+  "file": "selected.h5",
+  "forward_reverse_scales_match": true,
+  "objects_checked": 11,
+  "selected_alias_preserved": true,
+  "shared_scales_preserved": true,
+  "soft_calibration_identity_preserved": true,
+  "source_opened": false,
+  "status": "verified",
+  "supplemental_demo": false
+}

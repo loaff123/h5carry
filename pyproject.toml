@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77,<81", "wheel>=0.45,<0.46"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "h5carry"
+version = "0.1.0a1"
+description = "Inspect, export and independently verify complete-object subsets of trusted HDF5 archives"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "H5Carry contributors"}]
+dependencies = ["h5py>=3.14.0,<=3.16.0", "numpy==2.3.5"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.scripts]
+h5carry = "h5carry.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+h5carry = ["schemas/*.json"]

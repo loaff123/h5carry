@@ -1,0 +1,21 @@
+name: qualification
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [baseline, current]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - run: python -m pip install -c qualification/constraints-${{ matrix.profile }}.txt build setuptools wheel h5py numpy
+      - run: python -m pip install --no-deps -e .
+      - run: python -m tests.native_runner unittest discover -s tests -v
+      - run: python qualification/run_baselines.py qualification/runs/baselines
+      - run: python -m build --no-isolation

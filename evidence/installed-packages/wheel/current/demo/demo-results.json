@@ -1,0 +1,73 @@
+{
+  "scope": "frozen two-run family and separately supplemental demo",
+  "cases": [
+    {
+      "name": "frozen-two-run",
+      "runtime": {
+        "h5py": "3.16.0",
+        "hdf5": "2.0.0",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      },
+      "status": "passed",
+      "source_sha256": "8e98a2fac0247f49dc99dcb9e6d375bd76853234bcd3055c00c8b232c63328cf",
+      "source_unchanged": true,
+      "original_source_path_absent_for_analysis": true,
+      "source_bytes_held_aside_not_os_denied": true,
+      "output_relocated_into_new_empty_directory": true,
+      "analysis": {
+        "calibrated_totals": {
+          "other": 3173.0,
+          "selected": 173.0
+        },
+        "combined_total": 3346.0,
+        "excluded_marker_absent": true,
+        "explicit_reference_checks": 0,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "objects_checked": 11,
+        "selected_alias_preserved": true,
+        "shared_scales_preserved": true,
+        "soft_calibration_identity_preserved": true,
+        "source_opened": false,
+        "status": "verified",
+        "supplemental_demo": false
+      },
+      "output_sha256": "d0098647650902d4f7307f9a92ee065125a2d6147a248306e54b2c862cdbcd2b"
+    },
+    {
+      "name": "supplemental-demo",
+      "runtime": {
+        "h5py": "3.16.0",
+        "hdf5": "2.0.0",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      },
+      "status": "passed",
+      "source_sha256": "3d9b22ab00e51f2d93a3ffe55dc2319caee78b629d761cdd0987ac28cb98dd09",
+      "source_unchanged": true,
+      "original_source_path_absent_for_analysis": true,
+      "source_bytes_held_aside_not_os_denied": true,
+      "output_relocated_into_new_empty_directory": true,
+      "analysis": {
+        "calibrated_totals": {
+          "other": 3173.0,
+          "selected": 173.0
+        },
+        "combined_total": 3346.0,
+        "excluded_marker_absent": true,
+        "explicit_reference_checks": 7,
+        "file": "selected.h5",
+        "forward_reverse_scales_match": true,
+        "objects_checked": 13,
+        "selected_alias_preserved": true,
+        "shared_scales_preserved": true,
+        "soft_calibration_identity_preserved": true,
+        "source_opened": false,
+        "status": "verified",
+        "supplemental_demo": true
+      },
+      "output_sha256": "494ccfcd30ef598fa2549498ce029a54a3e7a4239adcae00cd2bb2a3b5130e3a"
+    }
+  ]
+}
