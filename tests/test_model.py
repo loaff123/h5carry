@@ -30,12 +30,23 @@ class ModelTests(unittest.TestCase):
 
     @unittest.skipUnless(__import__('sys').platform=='linux','FIFO check uses Linux')
     def test_nonregular_source_and_plan_fail_without_waiting_for_writer(self):
-        import os, subprocess, sys
+        import h5carry, os, subprocess, sys
+        package_root = Path(h5carry.__file__).resolve().parents[1]
         with tempfile.TemporaryDirectory() as d:
             fifo=Path(d)/'fifo'; os.mkfifo(fifo)
             for function in ('fingerprint','load_plan'):
-                code=('from h5carry.model import CarryError, fingerprint; from h5carry.plan import load_plan; '                      'import sys\ntry: '+function+'(sys.argv[1])\nexcept CarryError as e: assert e.code=="INVALID"\nelse: raise AssertionError("FIFO accepted")')
-                result=subprocess.run([sys.executable,'-c',code,str(fifo)],capture_output=True,text=True,timeout=1)
+                # Source-only and installed-artifact runs must test the same package as this process.
+                code = ('import sys\nfrom pathlib import Path\n'
+                        'root = Path(sys.argv[1]).resolve()\nsys.path.insert(0, str(root))\n'
+                        'import h5carry, h5carry.model, h5carry.plan\n'
+                        'assert Path(h5carry.__file__).resolve() == root / "h5carry" / "__init__.py"\n'
+                        'assert Path(h5carry.model.__file__).resolve() == root / "h5carry" / "model.py"\n'
+                        'assert Path(h5carry.plan.__file__).resolve() == root / "h5carry" / "plan.py"\n'
+                        'from h5carry.model import CarryError, fingerprint\nfrom h5carry.plan import load_plan\n'
+                        'try: '+function+'(sys.argv[2])\nexcept CarryError as e: assert e.code=="INVALID"\n'
+                        'else: raise AssertionError("FIFO accepted")')
+                result=subprocess.run([sys.executable,'-I','-S','-c',code,str(package_root),str(fifo)],
+                                      capture_output=True,text=True,timeout=1)
                 self.assertEqual(result.returncode,0,result.stderr)
 
     def test_errors_and_no_native_import(self):
