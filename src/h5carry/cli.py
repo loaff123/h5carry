@@ -18,11 +18,14 @@ def _limit_options(parser):
 
 
 def parser():
-    result=argparse.ArgumentParser(prog='h5carry', description='Plan, export and verify complete objects from trusted local HDF5 archives. Keep source files closed to writers.')
+    result=argparse.ArgumentParser(prog='h5carry', description='Plan, export and verify whole objects or explicit rectangular snapshots from trusted local HDF5 archives. Keep source files closed to writers.')
     result.add_argument('--version',action='version',version='h5carry '+__version__)
     commands=result.add_subparsers(dest='command',required=True)
     plan=commands.add_parser('plan',help='inspect selected dependencies without exporting')
-    plan.add_argument('source'); plan.add_argument('--select',action='append',required=True)
+    plan.add_argument('source')
+    selections=plan.add_mutually_exclusive_group(required=True)
+    selections.add_argument('--select',action='append')
+    selections.add_argument('--selection-json',help='strict typed rectangular request JSON')
     plan.add_argument('--out',required=True); _limit_options(plan)
     export=commands.add_parser('export',help='create a new independently verified HDF5 file')
     export.add_argument('source'); export.add_argument('--plan',required=True)
@@ -48,8 +51,13 @@ def main(argv=None):
         if args.command in ('plan','inspect'):
             limits=Limits(**{field.name:getattr(args,field.name) for field in fields(Limits)})
         if args.command=='plan':
-            assert_distinct(args.source,args.out)
-            value=make_plan(args.source,args.select,limits)
+            assert_distinct(args.source,args.selection_json,args.out)
+            if args.selection_json is not None:
+                from .selection import load_selection
+                from .plan_v2 import make_selection_plan
+                value=make_selection_plan(args.source,load_selection(args.selection_json,limits),limits)
+            else:
+                value=make_plan(args.source,args.select,limits)
             save_plan(value,args.out)
             _emit({'status':'planned','objects':len(value['graph']['objects']),
                    'links':len(value['graph']['links']),'payload_bytes':value['graph']['payload_bytes'],

@@ -1,0 +1,10 @@
+test_chunk_flags_for_empty_and_reference_datasets (test_review_whole_reliability.WholeReliabilityReview.test_chunk_flags_for_empty_and_reference_datasets) ... ok
+test_empty_chunk_query_failure_stays_incomplete (test_review_whole_reliability.WholeReliabilityReview.test_empty_chunk_query_failure_stays_incomplete) ... ok
+test_nondefault_flags_survive_alias_only_whole_export (test_review_whole_reliability.WholeReliabilityReview.test_nondefault_flags_survive_alias_only_whole_export) ... ok
+test_output_reference_never_is_refused_before_reference_read (test_review_whole_reliability.WholeReliabilityReview.test_output_reference_never_is_refused_before_reference_read) ... ok
+test_unselected_numeric_never_does_not_change_closure_or_read (test_review_whole_reliability.WholeReliabilityReview.test_unselected_numeric_never_does_not_change_closure_or_read) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.877s
+
+OK

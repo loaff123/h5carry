@@ -8,13 +8,20 @@ import unittest
 from pathlib import Path
 
 
+def _current_python(code, *args):
+    import h5carry
+    root = str(Path(h5carry.__file__).resolve().parents[1])
+    prefix = "import sys; sys.path.insert(0,"+repr(root)+"); "
+    return [sys.executable,"-I","-c",prefix+code,*args]
+
+
 class CliTests(unittest.TestCase):
     def test_help_version_and_native_free_import(self):
-        result=subprocess.run([sys.executable,'-c',"import h5carry.cli,sys; assert 'h5py' not in sys.modules; assert 'numpy' not in sys.modules"],capture_output=True,text=True)
+        result=subprocess.run(_current_python("import h5carry.cli,sys; assert 'h5py' not in sys.modules; assert 'numpy' not in sys.modules"),capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stderr)
-        result=subprocess.run([sys.executable,'-m','h5carry','--version'],capture_output=True,text=True)
+        result=subprocess.run(_current_python("from h5carry.cli import main; raise SystemExit(main())",'--version'),capture_output=True,text=True)
         self.assertEqual(result.returncode,0,result.stderr)
-        self.assertIn('0.1.0a1',result.stdout)
+        self.assertIn('0.2.0a1',result.stdout)
 
     def test_missing_arguments_fail(self):
         from h5carry.cli import main

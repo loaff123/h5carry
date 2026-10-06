@@ -111,6 +111,12 @@ def _dispatch(request: dict):
     from h5carry.model import Limits
     limits = Limits.from_dict(request['limits'])
     operation = request['operation']
+    if operation == 'plan_v2':
+        from h5carry.scan_v2 import make_plan_native
+        return make_plan_native(request['source'], request['request'], limits)
+    if operation == 'write_v2':
+        from h5carry.write_v2 import write_staging
+        return write_staging(request['source'], request['plan'], request['staging'], limits)
     if operation == 'plan':
         from h5carry.scan import make_plan_native
         return make_plan_native(request['source'], request['selections'], limits)
@@ -118,7 +124,10 @@ def _dispatch(request: dict):
         from h5carry.write import write_staging
         return write_staging(request['source'], request['graph'], request['staging'], limits)
     if operation == 'verify':
-        from h5carry.verify import verify_export
+        if request['plan'].get('version') == 2:
+            from h5carry.verify_v2 import verify_export
+        else:
+            from h5carry.verify import verify_export
         return verify_export(request['source'], request['output'], request['plan'], limits)
     if operation == 'inspect':
         from h5carry.verify import inspect_output

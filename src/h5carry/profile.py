@@ -86,7 +86,19 @@ def iter_blocks(shape, itemsize, chunk_bytes):
         yield tuple(slice(start, min(start + width, size)) for start, width, size in zip(starts, tile, shape))
 
 
+def admit_payload_read(dataset):
+    """Refuse undefined native values before any whole-dataset payload read.
+
+    Metadata-only description remains usable, including for an empty typed crop
+    of a nonempty source. Allocated storage cannot prove full initialization.
+    """
+    if (dataset.shape is not None and math.prod(dataset.shape) and
+            dataset.id.get_create_plist().get_fill_time() == h5py.h5d.FILL_TIME_NEVER):
+        unsupported('Nonempty FILL_TIME_NEVER payload reads are unqualified', dataset.name)
+
+
 def payload_digest(dataset, limits):
+    admit_payload_read(dataset)
     digest = hashlib.sha256()
     for selection in iter_blocks(dataset.shape, dataset.dtype.itemsize, limits.chunk_bytes):
         values = np.asarray(dataset[selection], dtype=dataset.dtype)

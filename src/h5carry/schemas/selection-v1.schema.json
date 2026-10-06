@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "H5Carry selection request v1",
+  "description": "Structural schema. The strict codec additionally checks duplicate object paths/mapping assertions, exact integer types, UTF-8 and byte budgets, normalized paths, equal vector ranks and start <= stop; source planning checks source extents and attachment identities.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "h5carry-selection"
+    },
+    "version": {
+      "const": 1
+    },
+    "objects": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10000,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "$ref": "#/$defs/path"
+          },
+          "selection": {
+            "$ref": "#/$defs/selection"
+          }
+        },
+        "required": [
+          "path",
+          "selection"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "scale_mappings": {
+      "type": "array",
+      "maxItems": 50000,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "consumer": {
+            "$ref": "#/$defs/path"
+          },
+          "axis": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 31
+          },
+          "scale": {
+            "$ref": "#/$defs/path"
+          },
+          "mapping": {
+            "const": "index"
+          }
+        },
+        "required": [
+          "consumer",
+          "axis",
+          "scale",
+          "mapping"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "storage_policy": {
+      "const": "fixed-snapshot-v1"
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "objects",
+    "scale_mappings",
+    "storage_policy"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "path": {
+      "type": "string",
+      "pattern": "^/(?:[^/\\u0000]+(?:/[^/\\u0000]+)*)?$",
+      "maxLength": 1024
+    },
+    "selection": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "whole"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "box"
+            },
+            "start": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9223372036854775807
+              },
+              "minItems": 1,
+              "maxItems": 32
+            },
+            "stop": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9223372036854775807
+              },
+              "minItems": 1,
+              "maxItems": 32
+            }
+          },
+          "required": [
+            "kind",
+            "start",
+            "stop"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # H5Carry
 
-Choose complete objects from a trusted local HDF5 archive, inspect what dependencies come along, and create a new file whose data and retained graph are independently checked.
+Choose whole objects or explicit rectangular snapshots from a trusted local HDF5 archive, inspect what dependencies come along, and create a new file whose data and retained graph are independently checked.
 
 H5Carry is an alpha command-line workflow for native HDF5. It preserves selected dataset aliases, supported object references, internal soft links, normal attributes, and dimension-scale relationships. It follows forward dependencies and rebuilds reverse scale relationships from retained consumers, so a shared scale alone does not select unrequested sibling runs.
 
@@ -21,6 +21,12 @@ h5carry inspect shared.h5 --report inspection.json
 The plan lists included objects, links, explicit references, scale edges, creation properties, normal attributes, logical data digests and reasons. Review it before exporting: an explicit reference on a selected object or ancestor can legitimately require another run. The source fingerprint binds the plan to the whole file. Plans contain retained metadata, which may itself be sensitive; treat plans and reports as scientific data.
 
 All destinations must be new. H5Carry never overwrites an existing plan, output or report. Output and report are individually published with atomic no-clobber hard-link creation on their local filesystems. They are **not an atomic pair**. If output succeeds and report publication fails, the verified output remains and the command reports that partial state. It checks staging/final inode identity after an interrupted publication; a null publication field means filesystem state could not be established. A crash can likewise leave only the verified output; compare its fingerprint with a new `verify` report. Power-loss durability is not promised.
+
+## Rectangular snapshots
+
+Use `h5carry plan source.h5 --selection-json selection.json --out plan.json` for rank-preserving, bounded start/stop boxes and explicit positional scale assertions. Proper crops have fixed maximum shape and deterministic clamped chunks. Shared scales and aliases must agree on original coordinates; ordinary references require whole targets. Empty rectangles are supported. Read [the exact request and resource contract](docs/rectangular-snapshots.md) before using this mode.
+
+Version 0.2.0a1 also intentionally narrows whole-object admission and strengthens creation-property verification after a demonstrated 0.1.0a1 omission. Nonempty `FILL_TIME_NEVER` payload reads are refused; see [the compatibility and reliability notes](docs/release-0.2.0a1.md).
 
 ## Practical example
 

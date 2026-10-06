@@ -1,4 +1,4 @@
-"""Allocate, copy, remap, and rebuild a declared native HDF5 graph."""
+"""Typed snapshot reconstruction, after source-bound decision rederivation."""
 from __future__ import annotations
 
 from collections import defaultdict
@@ -7,7 +7,8 @@ import math
 import h5py
 import numpy as np
 
-from .model import CarryError, validate_path
+from .model import CarryError, validate_path, fingerprint, canonical_json
+from .slicing import transfers
 from . import profile
 
 
@@ -27,29 +28,23 @@ def _hard_object(file, path, limits):
     return obj
 
 
-def write_staging(source, graph, staging, limits):
+def write_staging(source, plan, staging, limits):
     """Write only the caller-owned staging file; verification is separate."""
-    with h5py.File(source, 'r') as src:
-        records = {item['id']: item for item in graph['objects']}
-        source_objects = {}
-        actual_payload_bytes = 0
-        # The plan is untrusted. Account the actual admitted source dataspaces
-        # before opening the staging output, allocating objects, or copying any
-        # dataset values. A forged graph total or shape cannot raise this budget.
-        for path in sorted(records):
-            original = _hard_object(src, path, limits)
-            profile.describe_object(original, limits, hash_payload=False)
-            expected_group = records[path]['kind'] == 'group'
-            if expected_group != isinstance(original, h5py.Group):
-                raise CarryError('INVALID', 'Plan/source object kind mismatch', path)
-            if isinstance(original, h5py.Dataset):
-                profile.admit_payload_read(original)
-                count = 0 if original.shape is None else math.prod(original.shape)
-                actual_payload_bytes += count * original.dtype.itemsize
-                if actual_payload_bytes > limits.max_payload_bytes:
-                    raise CarryError('RESOURCE', 'Actual source payload exceeds max_payload_bytes before staging', path)
-            source_objects[path] = original
-        with h5py.File(staging, 'w', track_order=True) as out:
+    from .scan_v2 import make_plan_native
+    if fingerprint(source) != plan['source']:
+        raise CarryError('SOURCE_CHANGED', 'Source differs from typed plan')
+    derived = make_plan_native(source, plan['request'], limits)
+    for field in ('graph','source_objects','selections','transformations'):
+        if canonical_json(derived[field]) != canonical_json(plan[field]):
+            raise CarryError('MISMATCH', 'Typed plan differs from freshly derived source: ' + field)
+    if fingerprint(source) != plan['source']:
+        raise CarryError('SOURCE_CHANGED', 'Source changed before typed staging')
+    graph = derived['graph']
+    selections = {item['id']:item['selection'] for item in derived['selections']}
+    with h5py.File(source, 'r', rdcc_nbytes=0) as src:
+        records = {item['id']:item for item in graph['objects']}
+        source_objects = {path:_hard_object(src,path,limits) for path in records}
+        with h5py.File(staging, 'w', track_order=True, rdcc_nbytes=0) as out:
             destination = {'/': out['/']}
             for path in sorted(records, key=lambda value: (value.count('/'), value)):
                 record = records[path]
@@ -64,8 +59,15 @@ def write_staging(source, graph, staging, limits):
                         raise CarryError('INVALID', 'Plan/source object kind mismatch', path)
                     # Exact qualified type, dataspace, and creation list. Reference
                     # fill has already been required to be null; no raw ref leaks.
+                    dcpl = original.id.get_create_plist().copy()
+                    space = original.id.get_space()
+                    if selections[path]['kind'] == 'box':
+                        shape = tuple(record['metadata']['shape'])
+                        space = h5py.h5s.create_simple(shape,shape)
+                        if original.chunks:
+                            dcpl.set_chunk(tuple(record['metadata']['creation']['chunks']))
                     ident = h5py.h5d.create(out.id, path.encode('utf-8'), original.id.get_type(),
-                                           original.id.get_space(), dcpl=original.id.get_create_plist().copy())
+                                           space, dcpl=dcpl)
                     destination[path] = h5py.Dataset(ident)
             for link in graph['links']:
                 if link['kind'] == 'hard' and link['path'] != link['target']:
@@ -91,7 +93,7 @@ def write_staging(source, graph, staging, limits):
                 original, copied = source_objects[path], destination[path]
                 if isinstance(original, h5py.Dataset):
                     offset = 0
-                    for selection in profile.iter_blocks(original.shape, original.dtype.itemsize, limits.chunk_bytes):
+                    for selection, destination_selection in transfers(original,selections[path],limits):
                         if h5py.check_dtype(ref=original.dtype) is h5py.Reference:
                             # Construct bounded blocks in plan index order, never copy
                             # file-local reference bytes from the original file.
@@ -104,9 +106,9 @@ def write_staging(source, graph, staging, limits):
                                 target = mapping[offset]
                                 block.flat[index] = h5py.Reference() if target is None else destination[target].ref
                                 offset += 1
-                            copied[selection] = block
+                            copied[destination_selection] = block
                         else:
-                            copied[selection] = original[selection]
+                            copied[destination_selection] = original[selection]
                 for attr in records[path]['metadata']['attributes']:
                     name = attr['name']
                     aid = original.attrs.get_id(name)

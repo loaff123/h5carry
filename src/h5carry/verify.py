@@ -19,6 +19,7 @@ import h5py
 import numpy as np
 
 from .model import CarryError, Limits, canonical_json, fingerprint, validate_path
+from .native_properties import chunk_options
 from .profile import (attribute_descriptor, dataset_creation, dtype_descriptor,
                       reserved_metadata)
 
@@ -195,6 +196,11 @@ class _Inventory:
 
     def read(self, dataset, selection):
         self.tick()
+        # Independent admission, not the planner/writer's whole-payload guard.
+        # Sparse allocation status is not proof that every element was written.
+        if (dataset.shape is not None and math.prod(dataset.shape) and
+                dataset.id.get_create_plist().get_fill_time() == h5py.h5d.FILL_TIME_NEVER):
+            _problem("UNSUPPORTED", "nonempty FILL_TIME_NEVER payload reads are unqualified", dataset.name)
         data = np.asarray(dataset[selection], dtype=dataset.dtype)
         size = int(data.size) * dataset.dtype.itemsize
         if size > self.limits.chunk_bytes:
@@ -446,6 +452,31 @@ def verify_export(source, output, plan, limits):
                 delivered = _Inventory(dst, limits, coverage)
                 actual = delivered.project(set(delivered.names), set(delivered.soft))
                 diagnostics.extend(_graph_differences(expected, actual, "output"))
+                # JSON descriptors intentionally retain the exact v1 schema.
+                # Direct source-derived native checks cover the complete DCPL,
+                # including reference, empty and null datasets. H5Pequal omits
+                # chunk-option flags in the two qualified builds.
+                if not diagnostics:
+                    for record in expected["objects"]:
+                        if record["kind"] != "dataset":
+                            continue
+                        path = record["id"]
+                        left, right = src[path], dst[path]
+                        if not left.id.get_type().equal(right.id.get_type()):
+                            diagnostics.append({"code": "MISMATCH", "message": "low-level dataset datatype differs", "path": path})
+                        source_dcpl, output_dcpl = left.id.get_create_plist(), right.id.get_create_plist()
+                        if not source_dcpl.equal(output_dcpl):
+                            diagnostics.append({"code": "MISMATCH", "message": "native dataset creation properties differ", "path": path})
+                        if source_dcpl.get_layout() == h5py.h5d.CHUNKED:
+                            try:
+                                source_options = chunk_options(source_dcpl)
+                                output_options = chunk_options(output_dcpl)
+                            except CarryError as exc:
+                                if exc.path is None:
+                                    exc.path = path
+                                raise
+                            if source_options != output_options:
+                                diagnostics.append({"code": "MISMATCH", "message": "native dataset chunk options differ", "path": path})
                 # Independent byte comparison as well as descriptor/hash checks.
                 # There is no array equality coercion: -0 and NaN payload bits count.
                 if not diagnostics:

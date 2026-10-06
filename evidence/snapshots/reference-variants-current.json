@@ -1,0 +1,531 @@
+{
+  "candidate_package": "<workspace>/h5carry-slice-candidate/src/h5carry/__init__.py",
+  "case_definition": "2026-10-06 design PROBE-PLAN original coordinates, exact literal values and declared outcomes",
+  "cases": [
+    {
+      "adapter_note": "Same request; separately corrected expectation follows established retained-path closure: /gain_alias is sufficient for whole gain identity, refs remap to it",
+      "case": "reference_outbound_retained_alias",
+      "checker_case": "reference_outbound_retained_alias",
+      "expected_refusal": null,
+      "frozen_sha256_matches_source_copy": true,
+      "held_source_remains_available_without_os_isolation": true,
+      "independent_output_check": {
+        "case": "reference_outbound_retained_alias",
+        "checks": 75,
+        "fresh_process_pid": 237,
+        "maximum_logical_observer_read": 32,
+        "output_only_independent_observer": true,
+        "payload_bytes_observed": 76,
+        "runtime": {
+          "h5py": "3.16.0",
+          "hdf5": "2.0.0",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "source_path_unavailable": false,
+        "status": "verified"
+      },
+      "no_stage_artifacts_after_success": true,
+      "original_recipe_request": {
+        "scale_mappings": [
+          {
+            "axis": 0,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/time"
+          },
+          {
+            "axis": 1,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/channel"
+          }
+        ],
+        "selections": [
+          {
+            "path": "/A",
+            "start": [
+              1,
+              1
+            ],
+            "stop": [
+              4,
+              3
+            ]
+          }
+        ],
+        "whole": [
+          "/refs",
+          "/gain_alias"
+        ]
+      },
+      "output_bytes": 10900,
+      "output_sha256": "2eafea289ad83eba9f650b61832967d1655457ab4e75f6dc704c719362354f22",
+      "plan_result": {
+        "links": 5,
+        "objects": 6,
+        "payload_bytes": 92,
+        "source": {
+          "sha256": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+          "size": 19384
+        },
+        "status": "planned"
+      },
+      "plan_version": 2,
+      "product_reports": {
+        "export": "verified",
+        "inspect": "inspected",
+        "verify": "verified"
+      },
+      "relocated_source_unavailable_check": {
+        "case": "reference_outbound_retained_alias",
+        "checks": 75,
+        "fresh_process_pid": 240,
+        "maximum_logical_observer_read": 32,
+        "output_only_independent_observer": true,
+        "payload_bytes_observed": 76,
+        "runtime": {
+          "h5py": "3.16.0",
+          "hdf5": "2.0.0",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "source_path_unavailable": true,
+        "status": "verified"
+      },
+      "request": {
+        "format": "h5carry-selection",
+        "objects": [
+          {
+            "path": "/A",
+            "selection": {
+              "kind": "box",
+              "start": [
+                1,
+                1
+              ],
+              "stop": [
+                4,
+                3
+              ]
+            }
+          },
+          {
+            "path": "/gain_alias",
+            "selection": {
+              "kind": "whole"
+            }
+          },
+          {
+            "path": "/refs",
+            "selection": {
+              "kind": "whole"
+            }
+          }
+        ],
+        "scale_mappings": [
+          {
+            "axis": 0,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/time"
+          },
+          {
+            "axis": 1,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/channel"
+          }
+        ],
+        "storage_policy": "fixed-snapshot-v1",
+        "version": 1
+      },
+      "runtime": {
+        "h5py": "3.16.0",
+        "hdf5": "2.0.0",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      },
+      "selected_payload_bytes": 92,
+      "source_bytes": 19384,
+      "source_case": "reference_outbound",
+      "source_operation_path_unavailable_during_fresh_consumer": true,
+      "source_sha256_after": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "source_sha256_before": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "source_unchanged": true,
+      "status": "success",
+      "transformations": [
+        {
+          "id": "/A",
+          "output_chunks": [
+            3,
+            2
+          ],
+          "output_maxshape": [
+            3,
+            2
+          ],
+          "output_shape": [
+            3,
+            2
+          ],
+          "source_chunks": [
+            4,
+            4
+          ],
+          "source_maxshape": [
+            6,
+            4
+          ],
+          "source_shape": [
+            6,
+            4
+          ]
+        },
+        {
+          "id": "/channel",
+          "output_chunks": null,
+          "output_maxshape": [
+            2
+          ],
+          "output_shape": [
+            2
+          ],
+          "source_chunks": null,
+          "source_maxshape": [
+            4
+          ],
+          "source_shape": [
+            4
+          ]
+        },
+        {
+          "id": "/time",
+          "output_chunks": null,
+          "output_maxshape": [
+            3
+          ],
+          "output_shape": [
+            3
+          ],
+          "source_chunks": null,
+          "source_maxshape": [
+            6
+          ],
+          "source_shape": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "adapter_note": "Strengthened request explicitly adds whole /gain; original prototype checker remains unchanged and checks both retained aliases",
+      "case": "reference_outbound_explicit_both_aliases",
+      "checker_case": "reference_outbound",
+      "expected_refusal": null,
+      "frozen_sha256_matches_source_copy": true,
+      "held_source_remains_available_without_os_isolation": true,
+      "independent_output_check": {
+        "case": "reference_outbound",
+        "checks": 78,
+        "fresh_process_pid": 259,
+        "maximum_logical_observer_read": 32,
+        "output_only_independent_observer": true,
+        "payload_bytes_observed": 76,
+        "runtime": {
+          "h5py": "3.16.0",
+          "hdf5": "2.0.0",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "source_path_unavailable": false,
+        "status": "verified"
+      },
+      "no_stage_artifacts_after_success": true,
+      "original_recipe_request": {
+        "scale_mappings": [
+          {
+            "axis": 0,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/time"
+          },
+          {
+            "axis": 1,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/channel"
+          }
+        ],
+        "selections": [
+          {
+            "path": "/A",
+            "start": [
+              1,
+              1
+            ],
+            "stop": [
+              4,
+              3
+            ]
+          }
+        ],
+        "whole": [
+          "/refs",
+          "/gain_alias"
+        ]
+      },
+      "output_bytes": 10900,
+      "output_sha256": "c920f8adec9de7bee72fd006d6010ad4a574896bc82b86355f44bd5181576766",
+      "plan_result": {
+        "links": 6,
+        "objects": 6,
+        "payload_bytes": 92,
+        "source": {
+          "sha256": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+          "size": 19384
+        },
+        "status": "planned"
+      },
+      "plan_version": 2,
+      "product_reports": {
+        "export": "verified",
+        "inspect": "inspected",
+        "verify": "verified"
+      },
+      "relocated_source_unavailable_check": {
+        "case": "reference_outbound",
+        "checks": 78,
+        "fresh_process_pid": 262,
+        "maximum_logical_observer_read": 32,
+        "output_only_independent_observer": true,
+        "payload_bytes_observed": 76,
+        "runtime": {
+          "h5py": "3.16.0",
+          "hdf5": "2.0.0",
+          "numpy": "2.3.5",
+          "python": "3.12.14"
+        },
+        "source_path_unavailable": true,
+        "status": "verified"
+      },
+      "request": {
+        "format": "h5carry-selection",
+        "objects": [
+          {
+            "path": "/A",
+            "selection": {
+              "kind": "box",
+              "start": [
+                1,
+                1
+              ],
+              "stop": [
+                4,
+                3
+              ]
+            }
+          },
+          {
+            "path": "/gain",
+            "selection": {
+              "kind": "whole"
+            }
+          },
+          {
+            "path": "/gain_alias",
+            "selection": {
+              "kind": "whole"
+            }
+          },
+          {
+            "path": "/refs",
+            "selection": {
+              "kind": "whole"
+            }
+          }
+        ],
+        "scale_mappings": [
+          {
+            "axis": 0,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/time"
+          },
+          {
+            "axis": 1,
+            "consumer": "/A",
+            "mapping": "index",
+            "scale": "/channel"
+          }
+        ],
+        "storage_policy": "fixed-snapshot-v1",
+        "version": 1
+      },
+      "runtime": {
+        "h5py": "3.16.0",
+        "hdf5": "2.0.0",
+        "numpy": "2.3.5",
+        "python": "3.12.14"
+      },
+      "selected_payload_bytes": 92,
+      "source_bytes": 19384,
+      "source_case": "reference_outbound",
+      "source_operation_path_unavailable_during_fresh_consumer": true,
+      "source_sha256_after": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "source_sha256_before": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "source_unchanged": true,
+      "status": "success",
+      "transformations": [
+        {
+          "id": "/A",
+          "output_chunks": [
+            3,
+            2
+          ],
+          "output_maxshape": [
+            3,
+            2
+          ],
+          "output_shape": [
+            3,
+            2
+          ],
+          "source_chunks": [
+            4,
+            4
+          ],
+          "source_maxshape": [
+            6,
+            4
+          ],
+          "source_shape": [
+            6,
+            4
+          ]
+        },
+        {
+          "id": "/channel",
+          "output_chunks": null,
+          "output_maxshape": [
+            2
+          ],
+          "output_shape": [
+            2
+          ],
+          "source_chunks": null,
+          "source_maxshape": [
+            4
+          ],
+          "source_shape": [
+            4
+          ]
+        },
+        {
+          "id": "/time",
+          "output_chunks": null,
+          "output_maxshape": [
+            3
+          ],
+          "output_shape": [
+            3
+          ],
+          "source_chunks": null,
+          "source_maxshape": [
+            6
+          ],
+          "source_shape": [
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "failures": 0,
+    "language_controls": 0,
+    "mutation_controls": 1,
+    "policy_or_resource_refusals": 0,
+    "successes": 2
+  },
+  "failures": [],
+  "frozen_sources": {
+    "reference_outbound_explicit_both_aliases": {
+      "path": "<workspace>/h5carry-slice-design/evidence/probe-current/reference_outbound/source.h5",
+      "sha256_after": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "sha256_before": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "unchanged": true
+    },
+    "reference_outbound_retained_alias": {
+      "path": "<workspace>/h5carry-slice-design/evidence/probe-current/reference_outbound/source.h5",
+      "sha256_after": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "sha256_before": "bd7d371f0a925909d9ec39ee5a361156bde119088bcfcf56d2775705c8f9f946",
+      "unchanged": true
+    }
+  },
+  "language_controls": [],
+  "mutations": [
+    {
+      "case": "reference_outbound_retained_alias",
+      "kind": "ref",
+      "status": "detected",
+      "stderr_evidence": "Traceback (most recent call last):\n  File \"<workspace>/h5carry-slice-candidate/tests/native_bootstrap.py\", line 22, in <module>\n    runpy.run_module(module, run_name='__main__')\n  File \"<frozen runpy>\", line 229, in run_module\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"<workspace>/h5carry-slice-candidate/qualification/check_snapshot.py\", line 308, in <module>\n    main()\n  File \"<workspace>/h5carry-slice-candidate/qualification/check_snapshot.py\", line 296, in main\n    obs = (check_resource if args.resources else check_original)(args.input, args.case)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workspace>/h5carry-slice-candidate/qualification/check_snapshot.py\", line 206, in check_original\n    obs.need(f[actual[0]].id == gain.id, 'reference dataset target differs')\n  File \"<workspace>/h5carry-slice-candidate/qualification/check_snapshot.py\", line 46, in need\n    raise AssertionError(message)\nAssertionError: reference dataset target differs\n{'ok': False, 'error': {'code': 'ERROR', 'message': 'Native worker exited unexpectedly with status 1'}}\n"
+    }
+  ],
+  "native_controls": {
+    "cpu_seconds": 120,
+    "dynamic_plugins_disabled": true,
+    "file_bytes": 1073741824,
+    "memory_bytes": 2147483648,
+    "resource_controls_are_not_a_sandbox": true,
+    "wall_seconds": 180
+  },
+  "production_sha256_end": {
+    "src/h5carry/__init__.py": "57cf0b3bc8d1c31bd88be4374be2ac2d117cca39881aaa979bf0b694232b2e6c",
+    "src/h5carry/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/h5carry/cli.py": "0ceb89a4a27afeb8c25096c1da9b070ab579676eb95848f66c5d1f0956f61d67",
+    "src/h5carry/model.py": "9ddba3fa49837efe3b6e36f8194b68e92e920d759bd5e1390adff24640bbd69d",
+    "src/h5carry/native_properties.py": "0a2f155b474d6f02b7d0c377ff0e59be516b1373000519913e112ca21ccdd2bc",
+    "src/h5carry/plan.py": "af71ff997105489b77fd182b679edf22276fea785b0864a9b4138c8090e30681",
+    "src/h5carry/plan_v2.py": "1a0b2ba6d2b8792c3e6b5d823bb308d8e4f015aa4e42c3a9a12f649cd29d03ae",
+    "src/h5carry/profile.py": "1e144912fea18eaca8bbeab4d5576d65f91a9a48bad8429a19569484ba0b7a25",
+    "src/h5carry/scan.py": "26e354c9a7f45823fd45438cf62b5dca790560c3e2ffd721ae40268085a404b0",
+    "src/h5carry/scan_v2.py": "9c8beb787bf7a76c12ef17ff69169b777d553b4d7f936406c1d5fd6ee6ab8761",
+    "src/h5carry/selection.py": "997d8a4ccb38446a1f6b8e87950dd9b0467a6e434ef5039febc58e749bd785f8",
+    "src/h5carry/slicing.py": "fc095dcbf73d06bd72fcce02d0a895ff9057018ecb661193e84e3e9ac2451d2e",
+    "src/h5carry/supervisor.py": "e9d6a1cc1243678e6896d48771c809e24509bf06cb682605b0001644d29f369f",
+    "src/h5carry/transaction.py": "38af470850c9bb46ab23e430a5bdaa4ecf2dee923d06f1068b175c5d992dd3a5",
+    "src/h5carry/verify.py": "160581cf917f124ed62ec6c92a318208e42c4d37819711dae2b1e467e02d13be",
+    "src/h5carry/verify_v2.py": "0d7f2d928fb1f427cae3dc72707bab571c6ac4f6cc86428431d66f846bb7358c",
+    "src/h5carry/worker.py": "a76d234272e4799e6d0cab0ee4d7874866f5595f01d3c97586f1352a5f219710",
+    "src/h5carry/write.py": "5e9c1c02af9b03acb1bea4ae9368df86cb5a41e4bec5a4235b7f03d54072810a",
+    "src/h5carry/write_v2.py": "33793183e73bb0d28051d997abbf21982ddad4227046bdc8245426673e28a56e"
+  },
+  "production_sha256_start": {
+    "src/h5carry/__init__.py": "57cf0b3bc8d1c31bd88be4374be2ac2d117cca39881aaa979bf0b694232b2e6c",
+    "src/h5carry/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/h5carry/cli.py": "0ceb89a4a27afeb8c25096c1da9b070ab579676eb95848f66c5d1f0956f61d67",
+    "src/h5carry/model.py": "9ddba3fa49837efe3b6e36f8194b68e92e920d759bd5e1390adff24640bbd69d",
+    "src/h5carry/native_properties.py": "0a2f155b474d6f02b7d0c377ff0e59be516b1373000519913e112ca21ccdd2bc",
+    "src/h5carry/plan.py": "af71ff997105489b77fd182b679edf22276fea785b0864a9b4138c8090e30681",
+    "src/h5carry/plan_v2.py": "1a0b2ba6d2b8792c3e6b5d823bb308d8e4f015aa4e42c3a9a12f649cd29d03ae",
+    "src/h5carry/profile.py": "1e144912fea18eaca8bbeab4d5576d65f91a9a48bad8429a19569484ba0b7a25",
+    "src/h5carry/scan.py": "26e354c9a7f45823fd45438cf62b5dca790560c3e2ffd721ae40268085a404b0",
+    "src/h5carry/scan_v2.py": "9c8beb787bf7a76c12ef17ff69169b777d553b4d7f936406c1d5fd6ee6ab8761",
+    "src/h5carry/selection.py": "997d8a4ccb38446a1f6b8e87950dd9b0467a6e434ef5039febc58e749bd785f8",
+    "src/h5carry/slicing.py": "fc095dcbf73d06bd72fcce02d0a895ff9057018ecb661193e84e3e9ac2451d2e",
+    "src/h5carry/supervisor.py": "e9d6a1cc1243678e6896d48771c809e24509bf06cb682605b0001644d29f369f",
+    "src/h5carry/transaction.py": "38af470850c9bb46ab23e430a5bdaa4ecf2dee923d06f1068b175c5d992dd3a5",
+    "src/h5carry/verify.py": "160581cf917f124ed62ec6c92a318208e42c4d37819711dae2b1e467e02d13be",
+    "src/h5carry/verify_v2.py": "0d7f2d928fb1f427cae3dc72707bab571c6ac4f6cc86428431d66f846bb7358c",
+    "src/h5carry/worker.py": "a76d234272e4799e6d0cab0ee4d7874866f5595f01d3c97586f1352a5f219710",
+    "src/h5carry/write.py": "5e9c1c02af9b03acb1bea4ae9368df86cb5a41e4bec5a4235b7f03d54072810a",
+    "src/h5carry/write_v2.py": "33793183e73bb0d28051d997abbf21982ddad4227046bdc8245426673e28a56e"
+  },
+  "production_unchanged_during_run": true,
+  "protection_controls": [],
+  "python_executable": "<workspace>/h5carry-build-private/venv-current/bin/python",
+  "scope": "separate reference namespace contract variants",
+  "source_unavailable_scope": "Original operation pathname is absent during a fresh-process relocated output-only consumer; the byte-identical held source remains, without OS filesystem isolation",
+  "status": "passed"
+}

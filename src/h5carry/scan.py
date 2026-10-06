@@ -192,6 +192,7 @@ class _Inventory:
             if node['kind'] != 'dataset':
                 continue
             if meta['dtype']['kind'] == 'reference':
+                profile.admit_payload_read(obj)
                 count = 0 if obj.shape is None else math.prod(obj.shape)
                 if self.edges + count > self.limits.max_edges:
                     raise CarryError('RESOURCE', 'Reference dataset exceeds max_edges', obj.name)

@@ -1,10 +1,11 @@
 name: qualification
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
   linux:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
@@ -14,8 +15,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12.14'
-      - run: python -m pip install -c qualification/constraints-${{ matrix.profile }}.txt build setuptools wheel h5py numpy
-      - run: python -m pip install --no-deps -e .
-      - run: python -m tests.native_runner unittest discover -s tests -v
-      - run: python qualification/run_baselines.py qualification/runs/baselines
-      - run: python -m build --no-isolation
+      - name: Install pinned source profile
+        run: |
+          python -m venv .venv-source
+          .venv-source/bin/python -m pip install -c qualification/constraints-${{ matrix.profile }}.txt build setuptools wheel h5py numpy
+      - name: Check qualification gate rejects altered evidence
+        run: .venv-source/bin/python qualification/check_ci_gate.py
+      - name: Qualify source, wheel, extracted sdist and installed sdist
+        run: >-
+          .venv-source/bin/python qualification/run_ci.py
+          --profile ${{ matrix.profile }}
+          --out qualification/runs/ci-${{ matrix.profile }}
+      - name: Preserve complete raw evidence, including the original negative control
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-${{ matrix.profile }}-${{ github.sha }}
+          path: qualification/runs/ci-${{ matrix.profile }}/evidence/
+          if-no-files-found: error
+          retention-days: 30

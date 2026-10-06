@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "h5carry"
-version = "0.1.0a1"
-description = "Inspect, export and independently verify complete-object subsets of trusted HDF5 archives"
+version = "0.2.0a1"
+description = "Inspect, export and independently verify whole-object and rectangular snapshots of trusted HDF5 archives"
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"

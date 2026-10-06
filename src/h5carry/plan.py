@@ -157,7 +157,7 @@ def _metadata(value, kind, limits):
         _bad('fill must be hexadecimal bytes or null')
 
 
-def validate_plan(plan: dict, limits: Limits | None = None) -> dict:
+def _validate_plan_v1(plan: dict, limits: Limits | None = None) -> dict:
     ceiling = limits or Limits()
     _keys(plan, ('format','version','source','selections','limits','graph'), 'plan')
     if plan['format'] != 'h5carry-plan' or type(plan['version']) is not int or plan['version'] != 1:
@@ -276,6 +276,14 @@ def validate_plan(plan: dict, limits: Limits | None = None) -> dict:
     return plan
 
 
+def validate_plan(plan: dict, limits: Limits | None = None) -> dict:
+    """Dispatch exact versioned envelopes without broadening the v1 decoder."""
+    if type(plan) is dict and type(plan.get("version")) is int and plan["version"] == 2:
+        from .plan_v2 import validate_plan_v2
+        return validate_plan_v2(plan, limits)
+    return _validate_plan_v1(plan, limits)
+
+
 def _unique_pairs(pairs):
     result = {}
     for key, value in pairs:
@@ -330,6 +338,14 @@ def load_plan(path: str | Path, limits: Limits | None = None) -> dict:
                            parse_constant=lambda _: _bad('nonfinite JSON number'))
     except (ValueError, UnicodeError, RecursionError) as exc:
         raise CarryError('INVALID', 'malformed plan JSON') from exc
+    if type(value) is dict and type(value.get('version')) is int and value['version'] == 2:
+        # Preserve legacy v1 byte decoding, but typed v2 is strictly UTF-8 JSON.
+        try:
+            text = data.decode('utf-8', 'strict')
+        except UnicodeError as exc:
+            raise CarryError('INVALID', 'v2 plan must be UTF-8 JSON') from exc
+        if '\x00' in text or text.startswith('\ufeff'):
+            _bad('v2 plan must be UTF-8 JSON without a byte-order mark')
     return validate_plan(value, limits)
 
 

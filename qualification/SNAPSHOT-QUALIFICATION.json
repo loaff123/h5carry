@@ -1,0 +1,93 @@
+{
+  "baseline_public_commit": "172ab606d82c96a5a6103bc3a5436c77e1452a39",
+  "boundaries": [
+    "trusted quiescent local HDF5 only",
+    "no scientific schema or positional assertion truth guarantee",
+    "whole-file hashing and namespace inventory remain full-input work",
+    "raw chunk exposure bounds are not process-memory or performance guarantees",
+    "source pathname absence is not OS isolation",
+    "individual no-clobber output/report publication is not an atomic pair",
+    "historical0.1.0a1 guarantees about undefined data and omitted DCPL properties are specifically superseded"
+  ],
+  "compatibility": {
+    "full_native_creation_properties_plus_explicit_chunk_options_compared": true,
+    "typed_proper_crop_nondefault_chunk_options_refused": true,
+    "v1_never_nonempty_read_refusal_is_deliberate_narrowing": true,
+    "v1_schema_and_closure_retained": true
+  },
+  "date_utc": "2026-10-06",
+  "distribution_gates": {
+    "explicit_product_import_origins_checked": true,
+    "final_artifact_identity_receipt": "distributed separately to avoid a self-referential archive hash",
+    "production_and_schema_byte_identity_checked": true,
+    "surfaces": [
+      "source",
+      "installed-wheel",
+      "extracted-sdist",
+      "installed-sdist"
+    ],
+    "test_executions_per_surface_per_profile": 208
+  },
+  "format": "h5carry-snapshot-qualification",
+  "per_profile": {
+    "independent_typed_review_probes": 17,
+    "independent_typed_verifier_tests": 28,
+    "independent_whole_review_probes": 5,
+    "original_frozen_snapshot_matrix": {
+      "detected_mutations": 3,
+      "discrepancy_case": "reference_outbound",
+      "expected_policy_refusals": 7,
+      "passing_positive_journeys": 6,
+      "preserved_known_namespace_discrepancy": 1,
+      "strict_language_refusals": 14
+    },
+    "original_tests_retained": 94,
+    "separate_reference_contract_variants": {
+      "detected_reference_mutations": 1,
+      "passing_journeys": 2
+    },
+    "separate_resource_matrix": {
+      "exact_selected_payload_bytes": 268435456,
+      "expected_resource_refusals": 2,
+      "passing_journeys": 8
+    },
+    "source_tests": 208,
+    "v1_reliability_tests": 18,
+    "verifier_coalescing_regression_tests": 7,
+    "whole_object_workflows": {
+      "frozen_families": 4,
+      "relocated_demo_journeys": 2,
+      "unchanged_legacy_v1_artifact_triples_verified": 4
+    }
+  },
+  "profiles": {
+    "baseline": {
+      "h5py": "3.14.0",
+      "hdf5": "1.14.6",
+      "numpy": "2.3.5",
+      "python": "3.12.14"
+    },
+    "current": {
+      "h5py": "3.16.0",
+      "hdf5": "2.0.0",
+      "numpy": "2.3.5",
+      "python": "3.12.14"
+    }
+  },
+  "release": "0.2.0a1",
+  "source_preservation": {
+    "all_original_slice_source_hashes_unchanged": true,
+    "audit_evidence_hashes_unchanged": true,
+    "original_slice_source_files": 28,
+    "original_v1_audit_evidence_files": 144
+  },
+  "verifier_row_coalescing": {
+    "four_passes_retained": true,
+    "logical_and_aggregate_native_chunk_caps_unchanged": true,
+    "planner_and_verifier_tiling_independent": true,
+    "preserved_original_deadline_failure": true,
+    "single_unchanged_serial_observation_is_not_replacement_qualification": true,
+    "wall_time_guarantee": false
+  },
+  "version": 1
+}

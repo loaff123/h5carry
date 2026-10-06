@@ -106,6 +106,8 @@ def _validate_request(request: dict) -> None:
     operation = request.get('operation')
     variants = {
         'plan': {'operation', 'source', 'selections', 'limits'},
+        'plan_v2': {'operation', 'source', 'request', 'limits'},
+        'write_v2': {'operation', 'source', 'plan', 'staging', 'limits'},
         'write': {'operation', 'source', 'graph', 'staging', 'limits'},
         'verify': {'operation', 'source', 'output', 'plan', 'limits'},
         'inspect': {'operation', 'output', 'limits'},
@@ -122,6 +124,9 @@ def _validate_request(request: dict) -> None:
             raise ValueError('selections must be a nonempty list')
         for selection in request['selections']:
             validate_path(selection)
+    if operation == 'plan_v2':
+        from .selection import validate_selection
+        validate_selection(request['request'], Limits.from_dict(request['limits']))
     for name in ('plan', 'graph'):
         if name in request and not isinstance(request[name], dict):
             raise ValueError(f'{name} must be an object')

@@ -106,14 +106,24 @@ def export_checked(source, plan, output, report, *, plan_path=None):
     assert_distinct(source, plan_path, output, report)
     _vacant(output); _vacant(report)
     _source_matches(source, plan['source'])
+    if plan['version'] == 2:
+        derived = _native({'operation':'plan_v2','source':str(source),'request':plan['request'],'limits':limits.to_dict()})
+        for field in ('graph','source_objects','selections','transformations'):
+            if canonical_json(derived[field]) != canonical_json(plan[field]):
+                raise CarryError('MISMATCH','Typed plan differs from current source before staging: '+field)
+        _source_matches(source,plan['source'])
     stages=[]
     staged_output=staged_report=None
     output_published=False
     report_published=False
     try:
         staged_output = _stage(output); stages.append(staged_output)
-        _native({'operation':'write','source':str(source),'graph':plan['graph'],
-                 'staging':str(staged_output),'limits':limits.to_dict()})
+        if plan['version'] == 2:
+            _native({'operation':'write_v2','source':str(source),'plan':plan,
+                     'staging':str(staged_output),'limits':limits.to_dict()})
+        else:
+            _native({'operation':'write','source':str(source),'graph':plan['graph'],
+                     'staging':str(staged_output),'limits':limits.to_dict()})
         checked = _native({'operation':'verify','source':str(source),'output':str(staged_output),
                            'plan':plan,'limits':limits.to_dict()})
         if checked.get('status') != 'verified':
